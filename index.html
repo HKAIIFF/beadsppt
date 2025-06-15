@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FortuneBeads - AI驱动的命运珠材精准匹配系统</title>
+    <title>FortuneBeads - AI驅動的命運珠材精準匹配系統</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;700;900&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -18,6 +19,7 @@
             color: #ffffff;
             overflow: hidden;
             position: relative;
+            height: 100vh;
         }
 
         /* Background Effects */
@@ -68,7 +70,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 60px;
+            padding: 40px 60px;
             position: relative;
             overflow: hidden;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
@@ -78,24 +80,24 @@
         .logo {
             font-family: 'Cinzel', serif;
             font-weight: 700;
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             background: linear-gradient(135deg, #8B5CF6, #F59E0B, #EC4899);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             text-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             position: relative;
         }
 
         .logo::after {
             content: 'AI精算能量珠材';
             position: absolute;
-            bottom: -25px;
+            bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
             font-family: 'Orbitron', sans-serif;
-            font-size: 0.8rem;
+            font-size: 0.6rem;
             font-weight: 600;
             letter-spacing: 3px;
             color: #F59E0B;
@@ -104,9 +106,9 @@
 
         /* Typography */
         h1 {
-            font-size: 4rem;
+            font-size: 3.2rem;
             font-weight: 800;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             text-align: center;
             background: linear-gradient(135deg, #8B5CF6, #F59E0B);
             -webkit-background-clip: text;
@@ -116,43 +118,50 @@
         }
 
         h2 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             text-align: center;
             color: #ffffff;
         }
 
         h3 {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             color: #8B5CF6;
         }
 
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
         .subtitle {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: #94a3b8;
             text-align: center;
-            margin-bottom: 3rem;
-            max-width: 800px;
-            line-height: 1.6;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            line-height: 1.5;
         }
 
         /* Cards and Components */
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1100px;
             width: 100%;
+            margin-top: 1.5rem;
         }
 
         .feature-card {
-            background: rgba(15, 23, 42, 0.9);
+            background: rgba(15, 23, 42, 0.95);
             border: 2px solid rgba(139, 92, 246, 0.4);
-            border-radius: 20px;
-            padding: 2rem;
+            border-radius: 16px;
+            padding: 1.5rem;
             backdrop-filter: blur(15px);
             transition: all 0.3s ease;
             position: relative;
@@ -161,7 +170,7 @@
         }
 
         .feature-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             border-color: #8B5CF6;
             box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
         }
@@ -182,38 +191,38 @@
         }
 
         .feature-icon {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             background: linear-gradient(135deg, #8B5CF6, #EC4899);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
         }
 
         /* Statistics */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            max-width: 800px;
             width: 100%;
         }
 
         .stat-card {
             text-align: center;
-            padding: 2rem;
-            background: rgba(15, 23, 42, 0.9);
-            border-radius: 15px;
+            padding: 1.5rem;
+            background: rgba(15, 23, 42, 0.95);
+            border-radius: 12px;
             border: 2px solid rgba(139, 92, 246, 0.4);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
         .stat-number {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             font-weight: 800;
             background: linear-gradient(135deg, #8B5CF6, #F59E0B);
             -webkit-background-clip: text;
@@ -223,7 +232,7 @@
         }
 
         .stat-label {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #94a3b8;
             font-weight: 500;
         }
@@ -231,23 +240,23 @@
         /* Navigation */
         .nav-container {
             position: fixed;
-            bottom: 40px;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 15px;
+            gap: 10px;
             z-index: 1000;
             background: rgba(15, 23, 42, 0.9);
-            padding: 15px 25px;
-            border-radius: 50px;
+            padding: 12px 20px;
+            border-radius: 40px;
             backdrop-filter: blur(15px);
             border: 2px solid rgba(139, 92, 246, 0.4);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
         .nav-dot {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background: rgba(139, 92, 246, 0.3);
             cursor: pointer;
@@ -262,17 +271,17 @@
 
         .nav-controls {
             position: fixed;
-            bottom: 120px;
-            right: 40px;
+            bottom: 80px;
+            right: 30px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
             z-index: 1000;
         }
 
         .nav-btn {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: rgba(139, 92, 246, 0.2);
             border: 2px solid #8B5CF6;
@@ -282,7 +291,7 @@
             align-items: center;
             justify-content: center;
             transition: all 0.3s ease;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         .nav-btn:hover {
@@ -293,7 +302,7 @@
 
         /* Timeline */
         .timeline {
-            max-width: 1000px;
+            max-width: 900px;
             width: 100%;
             position: relative;
         }
@@ -301,28 +310,28 @@
         .timeline-item {
             display: flex;
             align-items: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             position: relative;
         }
 
         .timeline-year {
             background: linear-gradient(135deg, #8B5CF6, #EC4899);
             color: white;
-            padding: 1rem 2rem;
-            border-radius: 15px;
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
             font-weight: 700;
-            font-size: 1.2rem;
-            min-width: 120px;
+            font-size: 1rem;
+            min-width: 100px;
             text-align: center;
-            margin-right: 2rem;
-            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+            margin-right: 1.5rem;
+            box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
         }
 
         .timeline-content {
             flex: 1;
-            background: rgba(15, 23, 42, 0.9);
-            padding: 1.5rem;
-            border-radius: 15px;
+            background: rgba(15, 23, 42, 0.95);
+            padding: 1.2rem;
+            border-radius: 12px;
             border: 2px solid rgba(139, 92, 246, 0.4);
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
         }
@@ -330,10 +339,10 @@
         /* Market Visualization */
         .market-chart {
             width: 100%;
-            max-width: 800px;
-            height: 400px;
-            background: rgba(15, 23, 42, 0.9);
-            border-radius: 20px;
+            max-width: 700px;
+            height: 320px;
+            background: rgba(15, 23, 42, 0.95);
+            border-radius: 16px;
             border: 2px solid rgba(139, 92, 246, 0.4);
             position: relative;
             overflow: hidden;
@@ -344,7 +353,7 @@
             position: absolute;
             bottom: 0;
             background: linear-gradient(to top, #8B5CF6, #EC4899);
-            border-radius: 8px 8px 0 0;
+            border-radius: 6px 6px 0 0;
             transition: all 0.5s ease;
         }
 
@@ -353,17 +362,17 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);
-            gap: 1rem;
-            max-width: 1200px;
+            gap: 0.8rem;
+            max-width: 1000px;
             width: 100%;
-            height: 400px;
+            height: 320px;
         }
 
         .canvas-item {
-            background: rgba(15, 23, 42, 0.9);
+            background: rgba(15, 23, 42, 0.95);
             border: 2px solid rgba(139, 92, 246, 0.4);
-            border-radius: 12px;
-            padding: 1rem;
+            border-radius: 10px;
+            padding: 0.8rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -381,18 +390,18 @@
         /* Slide-specific styles */
         .slide-title {
             position: absolute;
-            top: 40px;
-            left: 60px;
-            font-size: 1.5rem;
+            top: 30px;
+            left: 50px;
+            font-size: 1.2rem;
             font-weight: 600;
             color: #8B5CF6;
         }
 
         .slide-number {
             position: absolute;
-            top: 40px;
-            right: 60px;
-            font-size: 1.2rem;
+            top: 30px;
+            right: 50px;
+            font-size: 1rem;
             color: #94a3b8;
         }
 
@@ -400,16 +409,16 @@
         .tech-stack {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
-            max-width: 800px;
+            gap: 0.8rem;
+            max-width: 700px;
             width: 100%;
         }
 
         .tech-layer {
-            background: rgba(15, 23, 42, 0.9);
+            background: rgba(15, 23, 42, 0.95);
             border: 2px solid rgba(139, 92, 246, 0.4);
-            border-radius: 12px;
-            padding: 1.5rem;
+            border-radius: 10px;
+            padding: 1.2rem;
             position: relative;
             overflow: hidden;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
@@ -428,17 +437,17 @@
         /* Pricing Cards */
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
             width: 100%;
         }
 
         .pricing-card {
-            background: rgba(15, 23, 42, 0.9);
+            background: rgba(15, 23, 42, 0.95);
             border: 2px solid rgba(139, 92, 246, 0.4);
-            border-radius: 20px;
-            padding: 2rem;
+            border-radius: 16px;
+            padding: 1.5rem;
             text-align: center;
             transition: all 0.3s ease;
             position: relative;
@@ -448,18 +457,18 @@
 
         .pricing-card.featured {
             border-color: #F59E0B;
-            transform: scale(1.05);
+            transform: scale(1.03);
             box-shadow: 0 25px 50px rgba(245, 158, 11, 0.3);
         }
 
         .pricing-card:hover {
-            transform: translateY(-10px) scale(1.02);
+            transform: translateY(-5px) scale(1.02);
             border-color: #8B5CF6;
             box-shadow: 0 20px 40px rgba(139, 92, 246, 0.4);
         }
 
         .pricing-price {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 800;
             background: linear-gradient(135deg, #8B5CF6, #F59E0B);
             -webkit-background-clip: text;
@@ -471,31 +480,32 @@
         /* Cultural System Grid */
         .culture-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            max-width: 1200px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+            max-width: 1100px;
             width: 100%;
         }
 
         .culture-card {
-            background: rgba(26, 32, 44, 0.6);
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            border-radius: 15px;
-            padding: 1.5rem;
+            background: rgba(15, 23, 42, 0.95);
+            border: 2px solid rgba(139, 92, 246, 0.4);
+            border-radius: 12px;
+            padding: 1.2rem;
             text-align: center;
             transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
         .culture-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
             display: block;
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             .slide {
-                padding: 40px 20px;
+                padding: 30px 40px;
             }
             
             h1 {
@@ -507,7 +517,42 @@
             }
             
             .logo {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+            }
+            
+            .feature-grid,
+            .stats-grid,
+            .pricing-grid,
+            .culture-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+            
+            .nav-controls {
+                bottom: 70px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 20px 30px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
             }
             
             .feature-grid,
@@ -517,9 +562,10 @@
                 grid-template-columns: 1fr;
             }
             
-            .nav-controls {
-                bottom: 100px;
-                right: 20px;
+            .timeline-year {
+                min-width: 80px;
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
             }
         }
 
@@ -540,7 +586,7 @@
         @keyframes slideUp {
             from { 
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(30px);
             }
             to { 
                 opacity: 1;
@@ -555,7 +601,7 @@
             background: rgba(139, 92, 246, 0.2);
             border-radius: 2px;
             overflow: hidden;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .loading-progress {
@@ -569,6 +615,118 @@
             from { width: 0%; }
             to { width: 100%; }
         }
+
+        /* 確保內容不會被遮擋 */
+        .content-safe {
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 文字內容優化 */
+        .feature-card p, .culture-card p, .stat-card p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .feature-card h3, .culture-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        /* 列表樣式優化 */
+        ul {
+            font-size: 0.85rem;
+            line-height: 1.3;
+            padding-left: 1.5rem;
+        }
+
+        ul li {
+            margin-bottom: 0.3rem;
+        }
+        
+        .funding-allocation {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        .funding-card {
+            padding: 1.2rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid;
+        }
+        
+        .funding-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+        
+        .funding-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .funding-amount {
+            color: #F59E0B;
+            font-weight: bold;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .team-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(15, 23, 42, 0.95);
+            border-radius: 16px;
+            border: 2px solid rgba(139, 92, 246, 0.4);
+        }
+        
+        .team-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8B5CF6, #EC4899);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .team-name {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-role {
+            color: #F59E0B;
+            margin-bottom: 0.8rem;
+        }
+        
+        .team-education {
+            color: #8B5CF6;
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -579,1303 +737,1365 @@
     <div class="slide-container" id="slideContainer">
         <!-- Slide 1: 封面 -->
         <div class="slide">
-            <div class="logo">FortuneBeads</div>
-            <h1>AI驱动的命运珠材<br>精准匹配系统</h1>
-            <p class="subtitle">
-                全球首个将量子计算与5000年传统运势智慧无缝融合的优化系统<br>
-                重新定义个人命运优化科学
-            </p>
-            <div class="stats-grid" style="margin-top: 3rem;">
-                <div class="stat-card">
-                    <div class="stat-number">3000+</div>
-                    <div class="stat-label">全球珠材</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">12</div>
-                    <div class="stat-label">文化体系</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">97%</div>
-                    <div class="stat-label">匹配精度</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">10^18</div>
-                    <div class="stat-label">组合可能</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 2: 市场机会 -->
-        <div class="slide">
-            <div class="slide-title">市场机会</div>
-            <div class="slide-number">02</div>
-            <h2>巨大的市场机遇</h2>
-            <p class="subtitle">四大趋势交汇点，创造万亿级市场机会</p>
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">💎</div>
-                    <h3>高端珠宝市场</h3>
-                    <div class="stat-number" style="font-size: 2rem;">$780B</div>
-                    <p>2024年市场规模，年增长率12.3%</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔮</div>
-                    <h3>能量灵性产品</h3>
-                    <div class="stat-number" style="font-size: 2rem;">$145B</div>
-                    <p>2024年市场规模，年增长率17.8%</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>AI个性化服务</h3>
-                    <div class="stat-number" style="font-size: 2rem;">$92B</div>
-                    <p>2024年市场规模，年增长率24.5%</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🏛️</div>
-                    <h3>传统文化复兴</h3>
-                    <div class="stat-number" style="font-size: 2rem;">$62B</div>
-                    <p>2024年市场规模，年增长率15.2%</p>
-                </div>
-            </div>
-            
-            <div style="margin-top: 2rem; text-align: center; padding: 2rem; background: rgba(139, 92, 246, 0.1); border-radius: 15px; border: 1px solid rgba(139, 92, 246, 0.3);">
-                <h3 style="color: #F59E0B; margin-bottom: 1rem;">交叉市场：AI驱动的个人能量优化</h3>
-                <div style="display: flex; justify-content: space-around; align-items: center;">
-                    <div>
-                        <div class="stat-number" style="font-size: 2.5rem;">$12B</div>
-                        <div class="stat-label">2024年市场规模</div>
-                    </div>
-                    <div style="font-size: 3rem; color: #8B5CF6;">→</div>
-                    <div>
-                        <div class="stat-number" style="font-size: 2.5rem;">$85B</div>
-                        <div class="stat-label">2030年预期规模</div>
-                    </div>
-                    <div style="font-size: 3rem; color: #8B5CF6;">→</div>
-                    <div>
-                        <div class="stat-number" style="font-size: 2.5rem;">38.6%</div>
-                        <div class="stat-label">复合年增长率</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 3: 痛点分析 -->
-        <div class="slide">
-            <div class="slide-title">问题洞察</div>
-            <div class="slide-number">03</div>
-            <h2>传统珠宝行业的致命痛点</h2>
-            <p class="subtitle">FortuneBeads瞄准的核心问题与机会</p>
-            
-            <div class="feature-grid">
-                <div class="feature-card" style="border-color: #EF4444;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #EF4444, #DC2626);">❌</div>
-                    <h3>同质化严重</h3>
-                    <p>80%的珠宝设计高度相似，难以满足新一代消费者对独特性的追求</p>
-                </div>
-                <div class="feature-card" style="border-color: #EF4444;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #EF4444, #DC2626);">🎯</div>
-                    <h3>价值主张单一</h3>
-                    <p>珠宝主要作为装饰品或投资品，功能性价值有限</p>
-                </div>
-                <div class="feature-card" style="border-color: #EF4444;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #EF4444, #DC2626);">⚙️</div>
-                    <h3>定制化程度低</h3>
-                    <p>大规模生产模式难以提供真正的个性化体验</p>
-                </div>
-                <div class="feature-card" style="border-color: #EF4444;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #EF4444, #DC2626);">💔</div>
-                    <h3>情感连接浅薄</h3>
-                    <p>缺乏与消费者生活目标、情感需求和身份认同的深层联系</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(16, 185, 129, 0.1)); border-radius: 20px; border: 2px solid #10B981;">
-                <h3 style="color: #10B981; text-align: center; margin-bottom: 2rem;">🎯 FortuneBeads的解决方案</h3>
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
-                    <div>
-                        <h4 style="color: #F59E0B; margin-bottom: 1rem;">✨ 前所未有的个性化</h4>
-                        <p>10^18种珠材组合，每个用户都获得独一无二的专属方案</p>
-                    </div>
-                    <div>
-                        <h4 style="color: #F59E0B; margin-bottom: 1rem;">🔬 科学验证的功能性</h4>
-                        <p>量子级能量测量，97%匹配精度，可验证的能量优化效果</p>
-                    </div>
-                    <div>
-                        <h4 style="color: #F59E0B; margin-bottom: 1rem;">🎨 终极定制体验</h4>
-                        <p>AI大师Jupiter提供一对一深度咨询，持续优化服务</p>
-                    </div>
-                    <div>
-                        <h4 style="color: #F59E0B; margin-bottom: 1rem;">💎 深度生活整合</h4>
-                        <p>与用户命运轨迹、人生目标、关键场景深度绑定</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 4: 产品概述 -->
-        <div class="slide">
-            <div class="slide-title">产品概述</div>
-            <div class="slide-number">04</div>
-            <h2>FortuneBeads核心价值主张</h2>
-            <p class="subtitle">五大革命性技术突破，重新定义珠材选择科学</p>
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
-                    <h3>超越人类极限的AI匹配</h3>
-                    <p>Jupiter系统处理10^18种组合，计算能力相当于全球专家50万年工作量</p>
-                    <div class="loading-bar">
-                        <div class="loading-progress" style="width: 100%;"></div>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">☯️</div>
-                    <h3>多维度运势精准优化</h3>
-                    <p>整合12种全球文化体系，覆盖不同时间维度和生活领域</p>
-                    <div class="loading-bar">
-                        <div class="loading-progress" style="width: 95%;"></div>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>场景化命运增强技术</h3>
-                    <p>识别240+关键场景，提供针对性能量支持，显著提升成功概率</p>
-                    <div class="loading-bar">
-                        <div class="loading-progress" style="width: 88%;"></div>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚛️</div>
-                    <h3>材料科学与古老智慧融合</h3>
-                    <p>量子级传感器+5000年智慧，创造跨越古今的能量科学</p>
-                    <div class="loading-bar">
-                        <div class="loading-progress" style="width: 92%;"></div>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h3>动态适应命运助推系统</h3>
-                    <p>持续学习优化，根据运势变化智能推荐最优组合</p>
-                    <div class="loading-bar">
-                        <div class="loading-progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3>跨文化运势系统整合</h3>
-                    <p>突破单一文化限制，整合全球12种运势文化系统</p>
-                    <div class="loading-bar">
-                        <div class="loading-progress" style="width: 98%;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 5: 技术架构 -->
-        <div class="slide">
-            <div class="slide-title">技术架构</div>
-            <div class="slide-number">05</div>
-            <h2>AI系统"Jupiter"技术架构</h2>
-            <p class="subtitle">革命性多层神经网络，专为运势文化计算设计</p>
-            
-            <div class="tech-stack">
-                <div class="tech-layer">
-                    <h3>🎯 应用层</h3>
-                    <p>用户界面 | 移动应用 | Web平台 | API接口</p>
-                </div>
-                <div class="tech-layer">
-                    <h3>🧠 AI决策层</h3>
-                    <p>Jupiter核心引擎 | 量子贝叶斯决策树 | 个性化推荐算法</p>
-                </div>
-                <div class="tech-layer">
-                    <h3>🔄 CrossBeam™连接层</h3>
-                    <p>跨域神经连接 | 文化调和算法 | 动态权重调整</p>
-                </div>
-                <div class="tech-layer">
-                    <h3>🧮 计算处理层</h3>
-                    <p>43个专业化神经网络层 | 量子计算增强 | 模式识别优化</p>
-                </div>
-                <div class="tech-layer">
-                    <h3>🌐 文化理解层</h3>
-                    <p>12种文化体系 | 传统智慧数字化 | 符号学处理</p>
-                </div>
-                <div class="tech-layer">
-                    <h3>📊 数据基础层</h3>
-                    <p>3000+珠材数据库 | 量子特性测量 | 用户画像系统</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                <div class="stat-card">
-                    <div class="stat-number" style="font-size: 2.5rem;">10^15</div>
-                    <div class="stat-label">每秒运算次数</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" style="font-size: 2.5rem;">200ms</div>
-                    <div class="stat-label">完整分析时间</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" style="font-size: 2.5rem;">97.3%</div>
-                    <div class="stat-label">匹配精确度</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 6: 全球文化体系 -->
-        <div class="slide">
-            <div class="slide-title">全球文化体系</div>
-            <div class="slide-number">06</div>
-            <h2>12种全球运势文化数据体系</h2>
-            <p class="subtitle">世界首个全面的运势文化数据系统，5000年智慧数字化</p>
-            
-            <div class="culture-grid">
-                <div class="culture-card">
-                    <div class="culture-icon">☯️</div>
-                    <h3>中国五行八字</h3>
-                    <p>四柱八字数学模型<br>纳音五行数据库</p>
-                </div>
-                <div class="culture-card">
-                    <div class="culture-icon">♌</div>
-                    <h3>西方占星学</h3>
-                    <p>完整天宫图计算<br>行星位置与相位</p>
-                </div>
-                <div class="culture-card">
-                    <div class="culture-icon">🕉️</div>
-                    <h3>印度吠陀占星</h3>
-                    <p>纳克沙特拉月宿<br>九大行星Graha</p>
-                </div>
-                <div class="culture-card">
-                    <div class="culture-icon">🔯</div>
-                    <h3>犹太卡巴拉</h3>
-                    <p>生命之树十原型<br>数字神秘学</p>
-                </div>
-                <div class="culture-card">
-                    <div class="culture-icon">☥</div>
-                    <h3>古埃及宝石学</h3>
-                    <p>埃及宝石守护神<br>金字塔能量学</p>
-                </div>
-                <div class="culture-card">
-                    <div class="culture-icon">🌟</div>
-                    <h3>玛雅能量日历</h3>
-                    <p>玛雅时间周期<br>个人能量特征</p>
-                </div>
-                <div class="culture-card">
-                    <div class="culture-icon">ᚱ</div>
-                    <h3>北欧符文</h3>
-                    <p>24个古代符文<br>材料对应关系</p>
-                </div>
-                <div class="culture-card">
-                    <div class="culture-icon">☸️</div>
-                    <h3>藏传佛教</h3>
-                    <p>密宗护法神系统<br>七轮能量中心</p>
-                </div>
-                <div class="culture-card">
-                    <div class="culture-icon">🌸</div>
-                    <h3>日本宿曜道</h3>
-                    <p>27宿星座系统<br>武士道精神能量</p>
-                </div>
-                <div class="culture-card">
-                    <div class="culture-icon">☪️</div>
-                    <h3>阿拉伯占星</h3>
-                    <p>阿拉伯月宿系统<br>煉金术材料学</p>
-                </div>
-                <div class="culture-card">
-                    <div class="culture-icon">🪘</div>
-                    <h3>非洲萨满</h3>
-                    <p>部落图腾动物<br>祖先灵魂沟通</p>
-                </div>
-                <div class="culture-card">
-                    <div class="culture-icon">🍀</div>
-                    <h3>凯尔特德鲁伊</h3>
-                    <p>树木月历系统<br>石圈巨石阵</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; text-align: center; padding: 2rem; background: rgba(139, 92, 246, 0.1); border-radius: 15px;">
-                <h3 style="color: #F59E0B;">🎯 跨文化整合成就</h3>
-                <p style="margin: 1rem 0;">通过专有调和算法，FortuneBeads首次实现不同文化运势系统的有机整合</p>
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 1.5rem;">
-                    <div>
-                        <div class="stat-number" style="font-size: 2rem;">5000</div>
-                        <div class="stat-label">年智慧传承</div>
-                    </div>
-                    <div>
-                        <div class="stat-number" style="font-size: 2rem;">98%</div>
-                        <div class="stat-label">兼容性</div>
-                    </div>
-                    <div>
-                        <div class="stat-number" style="font-size: 2rem;">∞</div>
-                        <div class="stat-label">可能性</div>
-                    </div>
-                    <div>
-                        <div class="stat-number" style="font-size: 2rem;">12</div>
-                        <div class="stat-label">文化系统</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 7: 珠材科学 -->
-        <div class="slide">
-            <div class="slide-title">珠材科学</div>
-            <div class="slide-number">07</div>
-            <h2>珠材科学与能量研究</h2>
-            <p class="subtitle">全球最全面的珠材数据库，量子级能量特性测量</p>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
-                <div>
-                    <h3 style="margin-bottom: 2rem;">🔬 科学测量技术</h3>
-                    <div class="tech-stack">
-                        <div class="tech-layer">
-                            <h4>量子共振扫描仪</h4>
-                            <p>捕捉珠材微观能量振动模式</p>
-                        </div>
-                        <div class="tech-layer">
-                            <h4>生物电场互动测试</h4>
-                            <p>测量珠材与生物电场的电磁变化</p>
-                        </div>
-                        <div class="tech-layer">
-                            <h4>多光谱能量成像</h4>
-                            <p>分析珠材的能量辐射模式</p>
-                        </div>
-                        <div class="tech-layer">
-                            <h4>晶格结构分析</h4>
-                            <p>研究分子排列对能量传导的影响</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 style="margin-bottom: 2rem;">💎 珠材能量等级</h3>
-                    <div style="space-y: 1rem;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: rgba(255, 215, 0, 0.1); border-radius: 10px; margin-bottom: 1rem;">
-                            <span style="color: #FF4500; font-weight: bold;">R9-R10 至尊级</span>
-                            <span>900-1000分</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: rgba(255, 105, 180, 0.1); border-radius: 10px; margin-bottom: 1rem;">
-                            <span style="color: #FF6B9D; font-weight: bold;">R7-R8 传奇级</span>
-                            <span>750-900分</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: rgba(139, 92, 246, 0.1); border-radius: 10px; margin-bottom: 1rem;">
-                            <span style="color: #8B5CF6; font-weight: bold;">R5-R6 稀有级</span>
-                            <span>600-750分</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: rgba(59, 130, 246, 0.1); border-radius: 10px; margin-bottom: 1rem;">
-                            <span style="color: #3B82F6; font-weight: bold;">R3-R4 优良级</span>
-                            <span>400-600分</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: rgba(156, 163, 175, 0.1); border-radius: 10px;">
-                            <span style="color: #9CA3AF; font-weight: bold;">R1-R2 普通级</span>
-                            <span>200-400分</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
-                <div class="stat-card">
-                    <div class="stat-number" style="font-size: 2rem;">3000+</div>
-                    <div class="stat-label">全球珠材</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" style="font-size: 2rem;">27</div>
-                    <div class="stat-label">合作国家</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" style="font-size: 2rem;">300+</div>
-                    <div class="stat-label">特性参数</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" style="font-size: 2rem;">65%</div>
-                    <div class="stat-label">效果提升</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 8: 用户画像 -->
-        <div class="slide">
-            <div class="slide-title">目标用户</div>
-            <div class="slide-number">08</div>
-            <h2>精准用户画像</h2>
-            <p class="subtitle">全球2.85亿目标用户，4275万高净值核心客群</p>
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">👔</div>
-                    <h3>精英职业者 (35%)</h3>
-                    <p><strong>30-45岁，高收入专业人士</strong></p>
-                    <p>核心需求：提升职业表现，优化决策能力，增强个人魅力和影响力</p>
-                    <p>价值敏感点：效果证明、科学依据、专属定制体验</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🧘</div>
-                    <h3>精神探索者 (25%)</h3>
-                    <p><strong>25-55岁，灵性成长爱好者</strong></p>
-                    <p>核心需求：深化精神体验，增强直觉能力，促进个人成长</p>
-                    <p>价值敏感点：传统智慧融合、社区认同、个性化体验</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚖️</div>
-                    <h3>生活优化者 (20%)</h3>
-                    <p><strong>28-50岁，追求生活平衡</strong></p>
-                    <p>核心需求：提升整体生活质量，解决特定领域挑战，增强适应力</p>
-                    <p>价值敏感点：实用性、数据驱动、持续优化支持</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3>新时代企业家 (20%)</h3>
-                    <p><strong>25-40岁，创业者/企业领导</strong></p>
-                    <p>核心需求：增强商业直觉，提升决策质量，把握关键机遇</p>
-                    <p>价值敏感点：独特竞争优势、效果量化、高端定制</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; padding: 2rem; background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(245, 158, 11, 0.1)); border-radius: 20px; border: 1px solid rgba(139, 92, 246, 0.3);">
-                <h3 style="text-align: center; margin-bottom: 2rem; color: #F59E0B;">📊 市场规模分析</h3>
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
-                    <div class="stat-card">
-                        <div class="stat-number" style="font-size: 2rem;">2.85亿</div>
-                        <div class="stat-label">全球目标用户</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" style="font-size: 2rem;">15%</div>
-                        <div class="stat-label">强烈兴趣比例</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" style="font-size: 2rem;">4275万</div>
-                        <div class="stat-label">核心付费用户</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" style="font-size: 2rem;">25%</div>
-                        <div class="stat-label">目标市场份额</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 9: 商业模式 -->
-        <div class="slide">
-            <div class="slide-title">商业模式</div>
-            <div class="slide-number">09</div>
-            <h2>多元化收入模式</h2>
-            <p class="subtitle">高附加值产品 + 持续服务 + 生态合作</p>
-            
-            <div class="canvas-grid">
-                <div class="canvas-item">
-                    <h4 style="color: #8B5CF6;">👥 关键合作伙伴</h4>
-                    <p>传统文化研究机构<br>珠材供应商<br>技术合作伙伴</p>
-                </div>
-                <div class="canvas-item">
-                    <h4 style="color: #8B5CF6;">🔧 关键活动</h4>
-                    <p>AI算法开发<br>珠材采购加工<br>用户体验优化</p>
-                </div>
-                <div class="canvas-item">
-                    <h4 style="color: #8B5CF6;">🎯 价值主张</h4>
-                    <p>科学化命运优化<br>个性化能量方案<br>持续优化服务</p>
-                </div>
-                <div class="canvas-item">
-                    <h4 style="color: #8B5CF6;">🤝 客户关系</h4>
-                    <p>一对一深度咨询<br>VIP专属服务<br>社区生态建设</p>
-                </div>
-                <div class="canvas-item">
-                    <h4 style="color: #8B5CF6;">💎 核心资源</h4>
-                    <p>Jupiter AI系统<br>全球珠材数据库<br>文化知识图谱</p>
-                </div>
-                <div class="canvas-item">
-                    <h4 style="color: #8B5CF6;">👤 客户细分</h4>
-                    <p>精英职业者<br>精神探索者<br>生活优化者<br>新时代企业家</p>
-                </div>
-                <div class="canvas-item">
-                    <h4 style="color: #8B5CF6;">🌐 渠道通路</h4>
-                    <p>线上AI咨询平台<br>旗舰体验中心<br>高端合作渠道</p>
-                </div>
-                <div class="canvas-item">
-                    <h4 style="color: #8B5CF6;">💰 成本结构</h4>
-                    <p>研发投入 40%<br>珠材采购 25%<br>运营成本 35%</p>
-                </div>
-                <div class="canvas-item">
-                    <h4 style="color: #8B5CF6;">💵 收入来源</h4>
-                    <p>定制珠串销售<br>咨询服务费<br>会员订阅</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                <div style="text-align: center; padding: 2rem; background: rgba(34, 197, 94, 0.1); border-radius: 15px; border: 1px solid #10B981;">
-                    <h4 style="color: #10B981; margin-bottom: 1rem;">💎 产品销售</h4>
-                    <div class="stat-number" style="font-size: 2rem;">70%</div>
-                    <p>定制珠串 + 配饰销售</p>
-                </div>
-                <div style="text-align: center; padding: 2rem; background: rgba(59, 130, 246, 0.1); border-radius: 15px; border: 1px solid #3B82F6;">
-                    <h4 style="color: #3B82F6; margin-bottom: 1rem;">🔮 服务收入</h4>
-                    <div class="stat-number" style="font-size: 2rem;">20%</div>
-                    <p>AI咨询 + 持续优化</p>
-                </div>
-                <div style="text-align: center; padding: 2rem; background: rgba(245, 158, 11, 0.1); border-radius: 15px; border: 1px solid #F59E0B;">
-                    <h4 style="color: #F59E0B; margin-bottom: 1rem;">🤝 生态合作</h4>
-                    <div class="stat-number" style="font-size: 2rem;">10%</div>
-                    <p>技术授权 + 合作分成</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 10: 价格体系 -->
-        <div class="slide">
-            <div class="slide-title">价格体系</div>
-            <div class="slide-number">10</div>
-            <h2>多层次价格策略</h2>
-            <p class="subtitle">覆盖不同消费能力，最大化市场渗透</p>
-            
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>入门系列</h3>
-                    <div class="pricing-price">$299</div>
-                    <div style="height: 80px; display: flex; align-items: center; justify-content: center; margin: 1rem 0;">
-                        <div style="display: flex; gap: 8px;">
-                            <div style="width: 25px; height: 25px; border-radius: 50%; background: linear-gradient(135deg, #EF4444, #DC2626);"></div>
-                            <div style="width: 25px; height: 25px; border-radius: 50%; background: linear-gradient(135deg, #8B5CF6, #7C3AED);"></div>
-                            <div style="width: 25px; height: 25px; border-radius: 50%; background: linear-gradient(135deg, #10B981, #059669);"></div>
-                        </div>
-                    </div>
-                    <ul style="text-align: left; space-y: 0.5rem;">
-                        <li>✅ 单圈手串（18-24颗珠）</li>
-                        <li>✅ 普通级珠材（R1-R4）</li>
-                        <li>✅ 基础五行平衡分析</li>
-                        <li>✅ 3个月优化建议</li>
-                        <li>❌ 跨文化系统整合</li>
-                    </ul>
-                    <div style="margin-top: 2rem; padding: 1rem; background: rgba(139, 92, 246, 0.1); border-radius: 10px;">
-                        <strong style="color: #8B5CF6;">目标：市场教育期</strong>
-                    </div>
-                </div>
-
-                <div class="pricing-card featured" style="position: relative;">
-                    <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #F59E0B; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">最受欢迎</div>
-                    <h3>进阶系列</h3>
-                    <div class="pricing-price">$599-$4999</div>
-                    <div style="height: 80px; display: flex; align-items: center; justify-content: center; margin: 1rem 0;">
-                        <div style="display: flex; gap: 6px;">
-                            <div style="width: 20px; height: 20px; border-radius: 50%; background: linear-gradient(135deg, #EF4444, #DC2626);"></div>
-                            <div style="width: 20px; height: 20px; border-radius: 50%; background: linear-gradient(135deg, #3B82F6, #2563EB);"></div>
-                            <div style="width: 20px; height: 20px; border-radius: 50%; background: linear-gradient(135deg, #F59E0B, #D97706);"></div>
-                            <div style="width: 20px; height: 20px; border-radius: 50%; background: linear-gradient(135deg, #10B981, #059669);"></div>
-                            <div style="width: 20px; height: 20px; border-radius: 50%; background: linear-gradient(135deg, #8B5CF6, #7C3AED);"></div>
-                        </div>
-                    </div>
-                    <ul style="text-align: left; space-y: 0.5rem;">
-                        <li>✅ 单/双圈定制手串</li>
-                        <li>✅ 珍稀级珠材（R5-R8）</li>
-                        <li>✅ 多维运势系统分析</li>
-                        <li>✅ 6个月持续服务</li>
-                        <li>✅ 三种场景增强方案</li>
-                    </ul>
-                    <div style="margin-top: 2rem; padding: 1rem; background: rgba(245, 158, 11, 0.1); border-radius: 10px;">
-                        <strong style="color: #F59E0B;">目标：主力收入来源</strong>
-                    </div>
-                </div>
-
-                <div class="pricing-card">
-                    <h3>尊享系列</h3>
-                    <div class="pricing-price">$10,000+</div>
-                    <div style="height: 80px; display: flex; align-items: center; justify-content: center; margin: 1rem 0;">
-                        <div style="display: flex; gap: 4px; flex-wrap: wrap; justify-content: center;">
-                            <div style="width: 15px; height: 15px; border-radius: 50%; background: linear-gradient(135deg, #EF4444, #DC2626);"></div>
-                            <div style="width: 15px; height: 15px; border-radius: 50%; background: linear-gradient(135deg, #F59E0B, #D97706);"></div>
-                            <div style="width: 15px; height: 15px; border-radius: 50%; background: linear-gradient(135deg, #8B5CF6, #7C3AED);"></div>
-                            <div style="width: 15px; height: 15px; border-radius: 50%; background: linear-gradient(135deg, #3B82F6, #2563EB);"></div>
-                            <div style="width: 15px; height: 15px; border-radius: 50%; background: linear-gradient(135deg, #10B981, #059669);"></div>
-                            <div style="width: 15px; height: 15px; border-radius: 50%; background: linear-gradient(135deg, #EC4899, #DB2777);"></div>
-                            <div style="width: 15px; height: 15px; border-radius: 50%; background: linear-gradient(135deg, #F97316, #EA580C);"></div>
-                            <div style="width: 15px; height: 15px; border-radius: 50%; background: linear-gradient(135deg, #84CC16, #65A30D);"></div>
-                        </div>
-                    </div>
-                    <ul style="text-align: left; space-y: 0.5rem;">
-                        <li>✅ 多圈能量手串设计</li>
-                        <li>✅ 收藏级珠材（R9-R10）</li>
-                        <li>✅ 跨文化系统整合分析</li>
-                        <li>✅ 12个月专属服务</li>
-                        <li>✅ 无限场景增强方案</li>
-                    </ul>
-                    <div style="margin-top: 2rem; padding: 1rem; background: rgba(139, 92, 246, 0.1); border-radius: 10px;">
-                        <strong style="color: #8B5CF6;">目标：品牌价值建立</strong>
-                    </div>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; text-align: center; padding: 2rem; background: rgba(15, 23, 42, 0.9); border-radius: 15px; border: 2px solid rgba(139, 92, 246, 0.4); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
-                <h3 style="color: #F59E0B;">📈 收入预测</h3>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                    <div>
-                        <div class="stat-number" style="font-size: 2rem;">70%</div>
-                        <div class="stat-label">进阶系列收入占比</div>
-                    </div>
-                    <div>
-                        <div class="stat-number" style="font-size: 2rem;">$2,500</div>
-                        <div class="stat-label">平均客单价</div>
-                    </div>
-                    <div>
-                        <div class="stat-number" style="font-size: 2rem;">3.2次</div>
-                        <div class="stat-label">年均复购次数</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 11: 竞争优势 -->
-        <div class="slide">
-            <div class="slide-title">竞争优势</div>
-            <div class="slide-number">11</div>
-            <h2>不可复制的核心护城河</h2>
-            <p class="subtitle">技术壁垒 + 数据护城河 + 文化深度 = 绝对领先</p>
-            
-            <div class="feature-grid">
-                <div class="feature-card" style="border-color: #10B981;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #10B981, #059669);">🧠</div>
-                    <h3>技术护城河</h3>
-                    <ul style="text-align: left; margin-top: 1rem;">
-                        <li>• Jupiter AI系统专利技术</li>
-                        <li>• 量子计算增强算法</li>
-                        <li>• CrossBeam™跨域连接层</li>
-                        <li>• 43层神经网络架构</li>
-                    </ul>
-                    <div class="stat-number" style="font-size: 1.5rem; margin-top: 1rem;">5-8年</div>
-                    <div class="stat-label">技术领先优势</div>
-                </div>
-
-                <div class="feature-card" style="border-color: #8B5CF6;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED);">📊</div>
-                    <h3>数据护城河</h3>
-                    <ul style="text-align: left; margin-top: 1rem;">
-                        <li>• 3000+珠材完整数据库</li>
-                        <li>• 12种文化体系数字化</li>
-                        <li>• 用户行为学习数据</li>
-                        <li>• 效果验证数据积累</li>
-                    </ul>
-                    <div class="stat-number" style="font-size: 1.5rem; margin-top: 1rem;">10^15</div>
-                    <div class="stat-label">数据点规模</div>
-                </div>
-
-                <div class="feature-card" style="border-color: #F59E0B;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #F59E0B, #D97706);">🏛️</div>
-                    <h3>文化深度护城河</h3>
-                    <ul style="text-align: left; margin-top: 1rem;">
-                        <li>• 与传统文化机构合作</li>
-                        <li>• 顶级命理大师顾问团</li>
-                        <li>• 5000年智慧传承整合</li>
-                        <li>• 跨文化调和算法专利</li>
-                    </ul>
-                    <div class="stat-number" style="font-size: 1.5rem; margin-top: 1rem;">5000年</div>
-                    <div class="stat-label">文化智慧深度</div>
-                </div>
-
-                <div class="feature-card" style="border-color: #EC4899;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #EC4899, #DB2777);">💎</div>
-                    <h3>供应链护城河</h3>
-                    <ul style="text-align: left; margin-top: 1rem;">
-                        <li>• 27国独家材料供应商</li>
-                        <li>• 稀有珠材锁定协议</li>
-                        <li>• 博物馆级藏品获取</li>
-                        <li>• 古法工艺传承合作</li>
-                    </ul>
-                    <div class="stat-number" style="font-size: 1.5rem; margin-top: 1rem;">27</div>
-                    <div class="stat-label">独家合作国家</div>
-                </div>
-
-                <div class="feature-card" style="border-color: #3B82F6;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #3B82F6, #2563EB);">🔬</div>
-                    <h3>科学验证护城河</h3>
-                    <ul style="text-align: left; margin-top: 1rem;">
-                        <li>• 量子级能量测量技术</li>
-                        <li>• 生物指标验证体系</li>
-                        <li>• 第三方效果认证</li>
-                        <li>• 学术研究合作</li>
-                    </ul>
-                    <div class="stat-number" style="font-size: 1.5rem; margin-top: 1rem;">97.3%</div>
-                    <div class="stat-label">科学验证精度</div>
-                </div>
-
-                <div class="feature-card" style="border-color: #84CC16;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #84CC16, #65A30D);">🌟</div>
-                    <h3>品牌体验护城河</h3>
-                    <ul style="text-align: left; margin-top: 1rem;">
-                        <li>• 一对一AI深度咨询</li>
-                        <li>• 旗舰体验中心</li>
-                        <li>• VIP专属服务体系</li>
-                        <li>• 全生命周期陪伴</li>
-                    </ul>
-                    <div class="stat-number" style="font-size: 1.5rem; margin-top: 1rem;">93%</div>
-                    <div class="stat-label">用户满意度</div>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; text-align: center; padding: 2rem; background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(245, 158, 11, 0.1)); border-radius: 20px; border: 2px solid #F59E0B;">
-                <h3 style="color: #F59E0B; margin-bottom: 1rem;">🏆 绝对竞争优势</h3>
-                <p style="font-size: 1.2rem; margin-bottom: 1rem;">
-                    <strong>全球唯一</strong>将量子计算、AI技术与传统文化智慧深度融合的平台
+            <div class="content-safe">
+                <div class="logo">FortuneBeads</div>
+                <h1>AI驅動的命運珠材<br>精準匹配系統</h1>
+                <p class="subtitle">
+                    全球首個將量子計算與5000年傳統運勢智慧無縫融合的優化系統<br>
+                    重新定義個人命運優化科學
                 </p>
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
-                    <div>
-                        <div class="stat-number" style="font-size: 2rem;">10+年</div>
-                        <div class="stat-label">技术领先优势期</div>
+                <div class="stats-grid" style="margin-top: 2rem;">
+                    <div class="stat-card">
+                        <div class="stat-number">3000+</div>
+                        <div class="stat-label">全球珠材</div>
                     </div>
-                    <div>
-                        <div class="stat-number" style="font-size: 2rem;">100%</div>
-                        <div class="stat-label">市场空白占领</div>
+                    <div class="stat-card">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">文化體系</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">97%</div>
+                        <div class="stat-label">匹配精度</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10^18</div>
+                        <div class="stat-label">組合可能</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 12: 发展路线图 -->
+        <!-- Slide 2: 市場機會 -->
         <div class="slide">
-            <div class="slide-title">发展路线图</div>
+            <div class="slide-title">市場機會</div>
+            <div class="slide-number">02</div>
+            <div class="content-safe">
+                <h2>巨大的市場機遇</h2>
+                <p class="subtitle">四大趨勢交匯點，創造萬億級市場機會</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💎</div>
+                        <h3>高端珠寶市場</h3>
+                        <div class="stat-number" style="font-size: 1.8rem;">$780B</div>
+                        <p>2024年市場規模，年增長率12.3%</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔮</div>
+                        <h3>能量靈性產品</h3>
+                        <div class="stat-number" style="font-size: 1.8rem;">$145B</div>
+                        <p>2024年市場規模，年增長率17.8%</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3>AI個人化服務</h3>
+                        <div class="stat-number" style="font-size: 1.8rem;">$92B</div>
+                        <p>2024年市場規模，年增長率24.5%</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏛️</div>
+                        <h3>傳統文化復興</h3>
+                        <div class="stat-number" style="font-size: 1.8rem;">$62B</div>
+                        <p>2024年市場規模，年增長率15.2%</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 1.5rem; text-align: center; padding: 1.5rem; background: rgba(139, 92, 246, 0.1); border-radius: 15px; border: 1px solid rgba(139, 92, 246, 0.3);">
+                    <h3 style="color: #F59E0B; margin-bottom: 1rem;">🏆 交叉市場：AI驅動的個人能量優化</h3>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+                        <div>
+                            <div class="stat-number" style="font-size: 2rem;">$12B</div>
+                            <div class="stat-label">2024年市場規模</div>
+                        </div>
+                        <div>
+                            <div class="stat-number" style="font-size: 2rem;">$85B</div>
+                            <div class="stat-label">2030年預期規模</div>
+                        </div>
+                        <div>
+                            <div class="stat-number" style="font-size: 2rem;">38.6%</div>
+                            <div class="stat-label">複合年增長率</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: 痛點分析 -->
+        <div class="slide">
+            <div class="slide-title">問題洞察</div>
+            <div class="slide-number">03</div>
+            <div class="content-safe">
+                <h2>傳統珠寶行業的致命痛點</h2>
+                <p class="subtitle">FortuneBeads瞄準的核心問題與機會</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card" style="border-color: #EF4444;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #EF4444, #DC2626);">❌</div>
+                        <h3>同質化嚴重</h3>
+                        <p>80%的珠寶設計高度相似，難以滿足新一代消費者對獨特性的追求</p>
+                    </div>
+                    <div class="feature-card" style="border-color: #EF4444;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #EF4444, #DC2626);">🎯</div>
+                        <h3>價值主張單一</h3>
+                        <p>珠寶主要作為裝飾品或投資品，功能性價值有限</p>
+                    </div>
+                    <div class="feature-card" style="border-color: #EF4444;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #EF4444, #DC2626);">⚙️</div>
+                        <h3>定制化程度低</h3>
+                        <p>大規模生產模式難以提供真正的個人化體驗</p>
+                    </div>
+                    <div class="feature-card" style="border-color: #EF4444;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #EF4444, #DC2626);">💔</div>
+                        <h3>情感連接淺薄</h3>
+                        <p>缺乏與消費者生活目標、情感需求和身份認同的深層聯繫</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(16, 185, 129, 0.1)); border-radius: 20px; border: 2px solid #10B981;">
+                    <h3 style="color: #10B981; text-align: center; margin-bottom: 1.5rem;">🎯 FortuneBeads的解決方案</h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+                        <div>
+                            <h4 style="color: #F59E0B; margin-bottom: 0.8rem;">✨ 前所未有的個人化</h4>
+                            <p style="font-size: 0.9rem;">10^18種珠材組合，每個用戶都獲得獨一無二的專屬方案</p>
+                        </div>
+                        <div>
+                            <h4 style="color: #F59E0B; margin-bottom: 0.8rem;">🔬 科學驗證的功能性</h4>
+                            <p style="font-size: 0.9rem;">量子級能量測量，97%匹配精度，可驗證的能量優化效果</p>
+                        </div>
+                        <div>
+                            <h4 style="color: #F59E0B; margin-bottom: 0.8rem;">🎨 終極定制體驗</h4>
+                            <p style="font-size: 0.9rem;">AI大師Jupiter提供一對一深度諮詢，持續優化服務</p>
+                        </div>
+                        <div>
+                            <h4 style="color: #F59E0B; margin-bottom: 0.8rem;">💎 深度生活整合</h4>
+                            <p style="font-size: 0.9rem;">與用戶命運軌跡、人生目標、關鍵場景深度綁定</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: 產品概述 -->
+        <div class="slide">
+            <div class="slide-title">產品概述</div>
+            <div class="slide-number">04</div>
+            <div class="content-safe">
+                <h2>FortuneBeads核心價值主張</h2>
+                <p class="subtitle">五大革命性技術突破，重新定義珠材選擇科學</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>超越人類極限的AI匹配</h3>
+                        <p>Jupiter系統處理10^18種組合，計算能力相當於全球專家50萬年工作量</p>
+                        <div class="loading-bar">
+                            <div class="loading-progress" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">☯️</div>
+                        <h3>多維度運勢精準優化</h3>
+                        <p>整合12種全球文化體系，覆蓋不同時間維度和生活領域</p>
+                        <div class="loading-bar">
+                            <div class="loading-progress" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>場景化命運增強技術</h3>
+                        <p>識別240+關鍵場景，提供針對性能量支持，顯著提升成功概率</p>
+                        <div class="loading-bar">
+                            <div class="loading-progress" style="width: 88%;"></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚛️</div>
+                        <h3>材料科學與古老智慧融合</h3>
+                        <p>量子級傳感器+5000年智慧，創造跨越古今的能量科學</p>
+                        <div class="loading-bar">
+                            <div class="loading-progress" style="width: 92%;"></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>動態適應命運助推系統</h3>
+                        <p>持續學習優化，根據運勢變化智能推薦最優組合</p>
+                        <div class="loading-bar">
+                            <div class="loading-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>跨文化運勢系統整合</h3>
+                        <p>突破單一文化限制，整合全球12種運勢文化系統</p>
+                        <div class="loading-bar">
+                            <div class="loading-progress" style="width: 98%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: 技術架構 -->
+        <div class="slide">
+            <div class="slide-title">技術架構</div>
+            <div class="slide-number">05</div>
+            <div class="content-safe">
+                <h2>AI系統"Jupiter"技術架構</h2>
+                <p class="subtitle">革命性多層神經網路，專為運勢文化計算設計</p>
+                
+                <div class="tech-stack">
+                    <div class="tech-layer">
+                        <h3>🎯 應用層</h3>
+                        <p>用戶界面 | 移動應用 | Web平台 | API接口</p>
+                    </div>
+                    <div class="tech-layer">
+                        <h3>🧠 AI決策層</h3>
+                        <p>Jupiter核心引擎 | 量子貝葉斯決策樹 | 個人化推薦算法</p>
+                    </div>
+                    <div class="tech-layer">
+                        <h3>🔄 CrossBeam™連接層</h3>
+                        <p>跨域神經連接 | 文化調和算法 | 動態權重調整</p>
+                    </div>
+                    <div class="tech-layer">
+                        <h3>🧮 計算處理層</h3>
+                        <p>43個專業化神經網路層 | 量子計算增強 | 模式識別優化</p>
+                    </div>
+                    <div class="tech-layer">
+                        <h3>🌐 文化理解層</h3>
+                        <p>12種文化體系 | 傳統智慧數位化 | 符號學處理</p>
+                    </div>
+                    <div class="tech-layer">
+                        <h3>📊 數據基礎層</h3>
+                        <p>3000+珠材數據庫 | 量子特性測量 | 用戶畫像系統</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size: 2rem;">10^15</div>
+                        <div class="stat-label">每秒運算次數</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size: 2rem;">200ms</div>
+                        <div class="stat-label">完整分析時間</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size: 2rem;">97.3%</div>
+                        <div class="stat-label">匹配精確度</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: 全球文化體系 -->
+        <div class="slide">
+            <div class="slide-title">全球文化體系</div>
+            <div class="slide-number">06</div>
+            <div class="content-safe">
+                <h2>12種全球運勢文化數據體系</h2>
+                <p class="subtitle">世界首個全面的運勢文化數據系統，5000年智慧數位化</p>
+                
+                <div class="culture-grid">
+                    <div class="culture-card">
+                        <div class="culture-icon">☯️</div>
+                        <h3>中國五行八字</h3>
+                        <p>四柱八字數學模型<br>納音五行數據庫</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-icon">♌</div>
+                        <h3>西方占星學</h3>
+                        <p>完整天宮圖計算<br>行星位置與相位</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-icon">🕉️</div>
+                        <h3>印度吠陀占星</h3>
+                        <p>納克沙特拉月宿<br>九大行星Graha</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-icon">🔯</div>
+                        <h3>猶太卡巴拉</h3>
+                        <p>生命之樹十原型<br>數字神秘學</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-icon">☥</div>
+                        <h3>古埃及寶石學</h3>
+                        <p>埃及寶石守護神<br>金字塔能量學</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-icon">🌟</div>
+                        <h3>瑪雅能量日曆</h3>
+                        <p>瑪雅時間週期<br>個人能量特徵</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-icon">ᚱ</div>
+                        <h3>北歐符文</h3>
+                        <p>24個古代符文<br>材料對應關係</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-icon">☸️</div>
+                        <h3>藏傳佛教</h3>
+                        <p>密宗護法神系統<br>七輪能量中心</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-icon">🌸</div>
+                        <h3>日本宿曜道</h3>
+                        <p>27宿星座系統<br>武士道精神能量</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-icon">☪️</div>
+                        <h3>阿拉伯占星</h3>
+                        <p>阿拉伯月宿系統<br>煉金術材料學</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-icon">🪘</div>
+                        <h3>非洲薩滿</h3>
+                        <p>部落圖騰動物<br>祖先靈魂溝通</p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="culture-icon">🍀</div>
+                        <h3>凱爾特德魯伊</h3>
+                        <p>樹木月曆系統<br>石圈巨石陣</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; text-align: center; padding: 1.5rem; background: rgba(139, 92, 246, 0.1); border-radius: 15px;">
+                    <h3 style="color: #F59E0B;">🎯 跨文化整合成就</h3>
+                    <p style="margin: 1rem 0;">通過專有調和算法，FortuneBeads首次實現不同文化運勢系統的有機整合</p>
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 1rem;">
+                        <div>
+                            <div class="stat-number" style="font-size: 1.8rem;">5000</div>
+                            <div class="stat-label">年智慧傳承</div>
+                        </div>
+                        <div>
+                            <div class="stat-number" style="font-size: 1.8rem;">98%</div>
+                            <div class="stat-label">兼容性</div>
+                        </div>
+                        <div>
+                            <div class="stat-number" style="font-size: 1.8rem;">∞</div>
+                            <div class="stat-label">可能性</div>
+                        </div>
+                        <div>
+                            <div class="stat-number" style="font-size: 1.8rem;">12</div>
+                            <div class="stat-label">文化系統</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: 珠材科學 -->
+        <div class="slide">
+            <div class="slide-title">珠材科學</div>
+            <div class="slide-number">07</div>
+            <div class="content-safe">
+                <h2>珠材科學與能量研究</h2>
+                <p class="subtitle">全球最全面的珠材數據庫，量子級能量特性測量</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+                    <div>
+                        <h3 style="margin-bottom: 1.5rem;">🔬 科學測量技術</h3>
+                        <div class="tech-stack">
+                            <div class="tech-layer">
+                                <h4>量子共振掃描儀</h4>
+                                <p>捕捉珠材微觀能量振動模式</p>
+                            </div>
+                            <div class="tech-layer">
+                                <h4>生物電場互動測試</h4>
+                                <p>測量珠材與生物電場的電磁變化</p>
+                            </div>
+                            <div class="tech-layer">
+                                <h4>多光譜能量成像</h4>
+                                <p>分析珠材的能量輻射模式</p>
+                            </div>
+                            <div class="tech-layer">
+                                <h4>晶格結構分析</h4>
+                                <p>研究分子排列對能量傳導的影響</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 style="margin-bottom: 1.5rem;">💎 珠材能量等級</h3>
+                        <div style="space-y: 0.8rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem; background: rgba(255, 215, 0, 0.1); border-radius: 8px; margin-bottom: 0.8rem;">
+                                <span style="color: #FF4500; font-weight: bold;">R9-R10 至尊級</span>
+                                <span>900-1000分</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem; background: rgba(255, 105, 180, 0.1); border-radius: 8px; margin-bottom: 0.8rem;">
+                                <span style="color: #FF6B9D; font-weight: bold;">R7-R8 傳奇級</span>
+                                <span>750-900分</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem; background: rgba(139, 92, 246, 0.1); border-radius: 8px; margin-bottom: 0.8rem;">
+                                <span style="color: #8B5CF6; font-weight: bold;">R5-R6 稀有級</span>
+                                <span>600-750分</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem; background: rgba(59, 130, 246, 0.1); border-radius: 8px; margin-bottom: 0.8rem;">
+                                <span style="color: #3B82F6; font-weight: bold;">R3-R4 優良級</span>
+                                <span>400-600分</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.8rem; background: rgba(156, 163, 175, 0.1); border-radius: 8px;">
+                                <span style="color: #9CA3AF; font-weight: bold;">R1-R2 普通級</span>
+                                <span>200-400分</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size: 1.8rem;">3000+</div>
+                        <div class="stat-label">全球珠材</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size: 1.8rem;">27</div>
+                        <div class="stat-label">合作國家</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size: 1.8rem;">300+</div>
+                        <div class="stat-label">特性參數</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="font-size: 1.8rem;">65%</div>
+                        <div class="stat-label">效果提升</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: 用戶畫像 -->
+        <div class="slide">
+            <div class="slide-title">目標用戶</div>
+            <div class="slide-number">08</div>
+            <div class="content-safe">
+                <h2>精準用戶畫像</h2>
+                <p class="subtitle">全球2.85億目標用戶，4275萬高淨值核心客群</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">👔</div>
+                        <h3>精英職業者 (35%)</h3>
+                        <p><strong>30-45歲，高收入專業人士</strong></p>
+                        <p>核心需求：提升職業表現，優化決策能力，增強個人魅力和影響力</p>
+                        <p>價值敏感點：效果證明、科學依據、專屬定制體驗</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧘</div>
+                        <h3>精神探索者 (25%)</h3>
+                        <p><strong>25-55歲，靈性成長愛好者</strong></p>
+                        <p>核心需求：深化精神體驗，增強直覺能力，促進個人成長</p>
+                        <p>價值敏感點：傳統智慧融合、社區認同、個人化體驗</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚖️</div>
+                        <h3>生活優化者 (20%)</h3>
+                        <p><strong>28-50歲，追求生活平衡</strong></p>
+                        <p>核心需求：提升整體生活質量，解決特定領域挑戰，增強適應力</p>
+                        <p>價值敏感點：實用性、數據驅動、持續優化支持</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>新時代企業家 (20%)</h3>
+                        <p><strong>25-40歲，創業者/企業領導</strong></p>
+                        <p>核心需求：增強商業直覺，提升決策質量，把握關鍵機遇</p>
+                        <p>價值敏感點：獨特競爭優勢、效果量化、高端定制</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; padding: 1.5rem; background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(245, 158, 11, 0.1)); border-radius: 20px; border: 1px solid rgba(139, 92, 246, 0.3);">
+                    <h3 style="text-align: center; margin-bottom: 1.5rem; color: #F59E0B;">📊 市場規模分析</h3>
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
+                        <div class="stat-card">
+                            <div class="stat-number" style="font-size: 1.8rem;">2.85億</div>
+                            <div class="stat-label">全球目標用戶</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" style="font-size: 1.8rem;">15%</div>
+                            <div class="stat-label">強烈興趣比例</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" style="font-size: 1.8rem;">4275萬</div>
+                            <div class="stat-label">核心付費用戶</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" style="font-size: 1.8rem;">25%</div>
+                            <div class="stat-label">目標市場份額</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: 商業模式 -->
+        <div class="slide">
+            <div class="slide-title">商業模式</div>
+            <div class="slide-number">09</div>
+            <div class="content-safe">
+                <h2>多元化收入模式</h2>
+                <p class="subtitle">高附加值產品 + 持續服務 + 生態合作</p>
+                
+                <div class="canvas-grid">
+                    <div class="canvas-item">
+                        <h4 style="color: #8B5CF6;">👥 關鍵合作夥伴</h4>
+                        <p>傳統文化研究機構<br>珠材供應商<br>技術合作夥伴</p>
+                    </div>
+                    <div class="canvas-item">
+                        <h4 style="color: #8B5CF6;">🔧 關鍵活動</h4>
+                        <p>AI算法開發<br>珠材採購加工<br>用戶體驗優化</p>
+                    </div>
+                    <div class="canvas-item">
+                        <h4 style="color: #8B5CF6;">🎯 價值主張</h4>
+                        <p>科學化命運優化<br>個人化能量方案<br>持續優化服務</p>
+                    </div>
+                    <div class="canvas-item">
+                        <h4 style="color: #8B5CF6;">🤝 客戶關係</h4>
+                        <p>一對一深度諮詢<br>VIP專屬服務<br>社區生態建設</p>
+                    </div>
+                    <div class="canvas-item">
+                        <h4 style="color: #8B5CF6;">💎 核心資源</h4>
+                        <p>Jupiter AI系統<br>全球珠材數據庫<br>文化知識圖譜</p>
+                    </div>
+                    <div class="canvas-item">
+                        <h4 style="color: #8B5CF6;">👤 客戶細分</h4>
+                        <p>精英職業者<br>精神探索者<br>生活優化者<br>新時代企業家</p>
+                    </div>
+                    <div class="canvas-item">
+                        <h4 style="color: #8B5CF6;">🌐 渠道通路</h4>
+                        <p>線上AI諮詢平台<br>旗艦體驗中心<br>高端合作渠道</p>
+                    </div>
+                    <div class="canvas-item">
+                        <h4 style="color: #8B5CF6;">💰 成本結構</h4>
+                        <p>研發投入 40%<br>珠材採購 25%<br>營運成本 35%</p>
+                    </div>
+                    <div class="canvas-item">
+                        <h4 style="color: #8B5CF6;">💵 收入來源</h4>
+                        <p>定制珠串銷售<br>諮詢服務費<br>會員訂閱</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(34, 197, 94, 0.1); border-radius: 15px; border: 1px solid #10B981;">
+                        <h4 style="color: #10B981; margin-bottom: 0.8rem;">💎 產品銷售</h4>
+                        <div class="stat-number" style="font-size: 1.8rem;">70%</div>
+                        <p>定制珠串 + 配飾銷售</p>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(59, 130, 246, 0.1); border-radius: 15px; border: 1px solid #3B82F6;">
+                        <h4 style="color: #3B82F6; margin-bottom: 0.8rem;">🔮 服務收入</h4>
+                        <div class="stat-number" style="font-size: 1.8rem;">20%</div>
+                        <p>AI諮詢 + 持續優化</p>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(245, 158, 11, 0.1); border-radius: 15px; border: 1px solid #F59E0B;">
+                        <h4 style="color: #F59E0B; margin-bottom: 0.8rem;">🤝 生態合作</h4>
+                        <div class="stat-number" style="font-size: 1.8rem;">10%</div>
+                        <p>技術授權 + 合作分成</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: 價格體系 -->
+        <div class="slide">
+            <div class="slide-title">價格體系</div>
+            <div class="slide-number">10</div>
+            <div class="content-safe">
+                <h2>多層次價格策略</h2>
+                <p class="subtitle">覆蓋不同消費能力，最大化市場滲透</p>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>入門系列</h3>
+                        <div class="pricing-price">$299</div>
+                        <div style="height: 60px; display: flex; align-items: center; justify-content: center; margin: 1rem 0;">
+                            <div style="display: flex; gap: 6px;">
+                                <div style="width: 20px; height: 20px; border-radius: 50%; background: linear-gradient(135deg, #EF4444, #DC2626);"></div>
+                                <div style="width: 20px; height: 20px; border-radius: 50%; background: linear-gradient(135deg, #8B5CF6, #7C3AED);"></div>
+                                <div style="width: 20px; height: 20px; border-radius: 50%; background: linear-gradient(135deg, #10B981, #059669);"></div>
+                            </div>
+                        </div>
+                        <ul style="text-align: left; font-size: 0.85rem;">
+                            <li>✅ 單圈手串（18-24顆珠）</li>
+                            <li>✅ 普通級珠材（R1-R4）</li>
+                            <li>✅ 基礎五行平衡分析</li>
+                            <li>✅ 3個月優化建議</li>
+                            <li>❌ 跨文化系統整合</li>
+                        </ul>
+                        <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(139, 92, 246, 0.1); border-radius: 8px;">
+                            <strong style="color: #8B5CF6;">目標：市場教育期</strong>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card featured" style="position: relative;">
+                        <div style="position: absolute; top: -8px; left: 50%; transform: translateX(-50%); background: #F59E0B; color: white; padding: 0.4rem 0.8rem; border-radius: 16px; font-size: 0.7rem; font-weight: bold;">最受歡迎</div>
+                        <h3>進階系列</h3>
+                        <div class="pricing-price">$599-$4999</div>
+                        <div style="height: 60px; display: flex; align-items: center; justify-content: center; margin: 1rem 0;">
+                            <div style="display: flex; gap: 5px;">
+                                <div style="width: 16px; height: 16px; border-radius: 50%; background: linear-gradient(135deg, #EF4444, #DC2626);"></div>
+                                <div style="width: 16px; height: 16px; border-radius: 50%; background: linear-gradient(135deg, #3B82F6, #2563EB);"></div>
+                                <div style="width: 16px; height: 16px; border-radius: 50%; background: linear-gradient(135deg, #F59E0B, #D97706);"></div>
+                                <div style="width: 16px; height: 16px; border-radius: 50%; background: linear-gradient(135deg, #10B981, #059669);"></div>
+                                <div style="width: 16px; height: 16px; border-radius: 50%; background: linear-gradient(135deg, #8B5CF6, #7C3AED);"></div>
+                            </div>
+                        </div>
+                        <ul style="text-align: left; font-size: 0.85rem;">
+                            <li>✅ 單/雙圈定制手串</li>
+                            <li>✅ 珍稀級珠材（R5-R8）</li>
+                            <li>✅ 多維運勢系統分析</li>
+                            <li>✅ 6個月持續服務</li>
+                            <li>✅ 三種場景增強方案</li>
+                        </ul>
+                        <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(245, 158, 11, 0.1); border-radius: 8px;">
+                            <strong style="color: #F59E0B;">目標：主力收入來源</strong>
+                        </div>
+                    </div>
+
+                    <div class="pricing-card">
+                        <h3>尊享系列</h3>
+                        <div class="pricing-price">$10,000+</div>
+                        <div style="height: 60px; display: flex; align-items: center; justify-content: center; margin: 1rem 0;">
+                            <div style="display: flex; gap: 3px; flex-wrap: wrap; justify-content: center;">
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #EF4444, #DC2626);"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #F59E0B, #D97706);"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #8B5CF6, #7C3AED);"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #3B82F6, #2563EB);"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #10B981, #059669);"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #EC4899, #DB2777);"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #F97316, #EA580C);"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #84CC16, #65A30D);"></div>
+                            </div>
+                        </div>
+                        <ul style="text-align: left; font-size: 0.85rem;">
+                            <li>✅ 多圈能量手串設計</li>
+                            <li>✅ 收藏級珠材（R9-R10）</li>
+                            <li>✅ 跨文化系統整合分析</li>
+                            <li>✅ 12個月專屬服務</li>
+                            <li>✅ 無限場景增強方案</li>
+                        </ul>
+                        <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(139, 92, 246, 0.1); border-radius: 8px;">
+                            <strong style="color: #8B5CF6;">目標：品牌價值建立</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; text-align: center; padding: 1.5rem; background: rgba(15, 23, 42, 0.9); border-radius: 15px; border: 2px solid rgba(139, 92, 246, 0.4);">
+                    <h3 style="color: #F59E0B; margin-bottom: 0.8rem;">📈 收入預測</h3>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                        <div>
+                            <div class="stat-number" style="font-size: 1.5rem;">70%</div>
+                            <div class="stat-label">進階系列收入佔比</div>
+                        </div>
+                        <div>
+                            <div class="stat-number" style="font-size: 1.5rem;">$2,500</div>
+                            <div class="stat-label">平均客單價</div>
+                        </div>
+                        <div>
+                            <div class="stat-number" style="font-size: 1.5rem;">3.2次</div>
+                            <div class="stat-label">年均複購次數</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: 競爭優勢 -->
+        <div class="slide">
+            <div class="slide-title">競爭優勢</div>
+            <div class="slide-number">11</div>
+            <div class="content-safe">
+                <h2>不可複製的核心護城河</h2>
+                <p class="subtitle">技術壁壘 + 數據護城河 + 文化深度 = 絕對領先</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card" style="border-color: #10B981;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #10B981, #059669);">🧠</div>
+                        <h3>技術護城河</h3>
+                        <ul style="text-align: left; margin-top: 0.8rem;">
+                            <li>• Jupiter AI系統專利技術</li>
+                            <li>• 量子計算增強算法</li>
+                            <li>• CrossBeam™跨域連接層</li>
+                            <li>• 43層神經網路架構</li>
+                        </ul>
+                        <div class="stat-number" style="font-size: 1.3rem; margin-top: 0.8rem;">5-8年</div>
+                        <div class="stat-label">技術領先優勢</div>
+                    </div>
+
+                    <div class="feature-card" style="border-color: #8B5CF6;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED);">📊</div>
+                        <h3>數據護城河</h3>
+                        <ul style="text-align: left; margin-top: 0.8rem;">
+                            <li>• 3000+珠材完整數據庫</li>
+                            <li>• 12種文化體系數位化</li>
+                            <li>• 用戶行為學習數據</li>
+                            <li>• 效果驗證數據積累</li>
+                        </ul>
+                        <div class="stat-number" style="font-size: 1.3rem; margin-top: 0.8rem;">10^15</div>
+                        <div class="stat-label">數據點規模</div>
+                    </div>
+
+                    <div class="feature-card" style="border-color: #F59E0B;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #F59E0B, #D97706);">🏛️</div>
+                        <h3>文化深度護城河</h3>
+                        <ul style="text-align: left; margin-top: 0.8rem;">
+                            <li>• 與傳統文化機構合作</li>
+                            <li>• 頂級命理大師顧問團</li>
+                            <li>• 5000年智慧傳承整合</li>
+                            <li>• 跨文化調和算法專利</li>
+                        </ul>
+                        <div class="stat-number" style="font-size: 1.3rem; margin-top: 0.8rem;">5000年</div>
+                        <div class="stat-label">文化智慧深度</div>
+                    </div>
+
+                    <div class="feature-card" style="border-color: #EC4899;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #EC4899, #DB2777);">💎</div>
+                        <h3>供應鏈護城河</h3>
+                        <ul style="text-align: left; margin-top: 0.8rem;">
+                            <li>• 27國獨家材料供應商</li>
+                            <li>• 稀有珠材鎖定協議</li>
+                            <li>• 博物館級藏品獲取</li>
+                            <li>• 古法工藝傳承合作</li>
+                        </ul>
+                        <div class="stat-number" style="font-size: 1.3rem; margin-top: 0.8rem;">27</div>
+                        <div class="stat-label">獨家合作國家</div>
+                    </div>
+
+                    <div class="feature-card" style="border-color: #3B82F6;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #3B82F6, #2563EB);">🔬</div>
+                        <h3>科學驗證護城河</h3>
+                        <ul style="text-align: left; margin-top: 0.8rem;">
+                            <li>• 量子級能量測量技術</li>
+                            <li>• 生物指標驗證體系</li>
+                            <li>• 第三方效果認證</li>
+                            <li>• 學術研究合作</li>
+                        </ul>
+                        <div class="stat-number" style="font-size: 1.3rem; margin-top: 0.8rem;">97.3%</div>
+                        <div class="stat-label">科學驗證精度</div>
+                    </div>
+
+                    <div class="feature-card" style="border-color: #84CC16;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #84CC16, #65A30D);">🌟</div>
+                        <h3>品牌體驗護城河</h3>
+                        <ul style="text-align: left; margin-top: 0.8rem;">
+                            <li>• 一對一AI深度諮詢</li>
+                            <li>• 旗艦體驗中心</li>
+                            <li>• VIP專屬服務體系</li>
+                            <li>• 全生命週期陪伴</li>
+                        </ul>
+                        <div class="stat-number" style="font-size: 1.3rem; margin-top: 0.8rem;">93%</div>
+                        <div class="stat-label">用戶滿意度</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(245, 158, 11, 0.1)); border-radius: 20px; border: 2px solid #F59E0B;">
+                    <h3 style="color: #F59E0B; margin-bottom: 1rem;">🏆 絕對競爭優勢</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+                        <strong>全球唯一</strong>將量子計算、AI技術與傳統文化智慧深度融合的平台
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+                        <div>
+                            <div class="stat-number" style="font-size: 1.8rem;">10+年</div>
+                            <div class="stat-label">技術領先優勢期</div>
+                        </div>
+                        <div>
+                            <div class="stat-number" style="font-size: 1.8rem;">100%</div>
+                            <div class="stat-label">市場空白佔領</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: 發展路線圖 -->
+        <div class="slide">
+            <div class="slide-title">發展路線圖</div>
             <div class="slide-number">12</div>
-            <h2>三阶段发展战略</h2>
-            <p class="subtitle">从技术领先到市场主导，最终成为行业标准制定者</p>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">2025-2026</div>
-                    <div class="timeline-content">
-                        <h3 style="color: #10B981; margin-bottom: 1rem;">📈 近期发展 - 市场建立期</h3>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                            <div>
-                                <h4 style="color: #8B5CF6;">技术发展</h4>
-                                <ul style="margin-top: 0.5rem;">
-                                    <li>• Jupiter 2.0版本发布</li>
-                                    <li>• 珠材数据库扩展至5000种</li>
-                                    <li>• 移动应用程序推出</li>
-                                    <li>• 量子测量精度提升50%</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 style="color: #8B5CF6;">业务发展</h4>
-                                <ul style="margin-top: 0.5rem;">
-                                    <li>• 5个旗舰体验中心开设</li>
-                                    <li>• 核心VIP用户社区建立</li>
-                                    <li>• 高端限量版系列推出</li>
-                                    <li>• 3-5个文化机构合作</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div style="margin-top: 1rem; padding: 1rem; background: rgba(16, 185, 129, 0.1); border-radius: 10px;">
-                            <strong style="color: #10B981;">目标：完成首轮目标市场品牌建立</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-year">2027-2028</div>
-                    <div class="timeline-content">
-                        <h3 style="color: #F59E0B; margin-bottom: 1rem;">🚀 中期发展 - 规模扩张期</h3>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                            <div>
-                                <h4 style="color: #8B5CF6;">技术发展</h4>
-                                <ul style="margin-top: 0.5rem;">
-                                    <li>• 生物识别技术整合</li>
-                                    <li>• AR增强珠材选择体验</li>
-                                    <li>• 文化融合计算引擎2.0</li>
-                                    <li>• 材料协同效应完整映射</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 style="color: #8B5CF6;">业务发展</h4>
-                                <ul style="margin-top: 0.5rem;">
-                                    <li>• 扩展至第二阶段目标市场</li>
-                                    <li>• 全球材料采集网络建立</li>
-                                    <li>• 企业定制服务推出</li>
-                                    <li>• 中端产品线开发</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div style="margin-top: 1rem; padding: 1rem; background: rgba(245, 158, 11, 0.1); border-radius: 10px;">
-                            <strong style="color: #F59E0B;">目标：实现全球主要市场覆盖</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-year">2029-2030</div>
-                    <div class="timeline-content">
-                        <h3 style="color: #8B5CF6; margin-bottom: 1rem;">🌟 长期发展 - 生态建设期</h3>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                            <div>
-                                <h4 style="color: #8B5CF6;">技术发展</h4>
-                                <ul style="margin-top: 0.5rem;">
-                                    <li>• 能量场全息可视化</li>
-                                    <li>• 数字孪生能量模型</li>
-                                    <li>• 量子计算超级个性化</li>
-                                    <li>• 全球能量研究数据库</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 style="color: #8B5CF6;">业务发展</h4>
-                                <ul style="margin-top: 0.5rem;">
-                                    <li>• FortuneBeads学院建立</li>
-                                    <li>• 商业应用解决方案</li>
-                                    <li>• 医疗健康领域拓展</li>
-                                    <li>• 跨文化智慧保护平台</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div style="margin-top: 1rem; padding: 1rem; background: rgba(139, 92, 246, 0.1); border-radius: 10px;">
-                            <strong style="color: #8B5CF6;">目标：成为能量优化行业标准制定者</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 13: 财务预测 -->
-        <div class="slide">
-            <div class="slide-title">财务预测</div>
-            <div class="slide-number">13</div>
-            <h2>5年财务模型</h2>
-            <p class="subtitle">保守预测下的爆发式增长潜力</p>
-            
-            <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; align-items: start;">
-                <div class="market-chart">
-                    <div style="padding: 2rem; height: 100%;">
-                        <h3 style="text-align: center; margin-bottom: 2rem; color: #F59E0B;">📊 收入增长预测</h3>
-                        <div style="position: relative; height: 250px; display: flex; align-items: end; justify-content: space-around;">
-                            <div style="display: flex; flex-direction: column; align-items: center;">
-                                <div style="width: 40px; height: 20px; background: linear-gradient(to top, #8B5CF6, #EC4899); margin-bottom: 0.5rem; border-radius: 4px 4px 0 0;"></div>
-                                <span style="font-size: 0.8rem;">2025</span>
-                                <span style="font-size: 0.7rem; color: #94a3b8;">$2M</span>
-                            </div>
-                            <div style="display: flex; flex-direction: column; align-items: center;">
-                                <div style="width: 40px; height: 50px; background: linear-gradient(to top, #8B5CF6, #EC4899); margin-bottom: 0.5rem; border-radius: 4px 4px 0 0;"></div>
-                                <span style="font-size: 0.8rem;">2026</span>
-                                <span style="font-size: 0.7rem; color: #94a3b8;">$8M</span>
-                            </div>
-                            <div style="display: flex; flex-direction: column; align-items: center;">
-                                <div style="width: 40px; height: 100px; background: linear-gradient(to top, #8B5CF6, #EC4899); margin-bottom: 0.5rem; border-radius: 4px 4px 0 0;"></div>
-                                <span style="font-size: 0.8rem;">2027</span>
-                                <span style="font-size: 0.7rem; color: #94a3b8;">$25M</span>
-                            </div>
-                            <div style="display: flex; flex-direction: column; align-items: center;">
-                                <div style="width: 40px; height: 160px; background: linear-gradient(to top, #8B5CF6, #EC4899); margin-bottom: 0.5rem; border-radius: 4px 4px 0 0;"></div>
-                                <span style="font-size: 0.8rem;">2028</span>
-                                <span style="font-size: 0.7rem; color: #94a3b8;">$65M</span>
-                            </div>
-                            <div style="display: flex; flex-direction: column; align-items: center;">
-                                <div style="width: 40px; height: 220px; background: linear-gradient(to top, #8B5CF6, #EC4899); margin-bottom: 0.5rem; border-radius: 4px 4px 0 0;"></div>
-                                <span style="font-size: 0.8rem;">2029</span>
-                                <span style="font-size: 0.7rem; color: #94a3b8;">$150M</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 style="margin-bottom: 2rem; color: #8B5CF6;">📈 关键指标</h3>
-                    <div class="stats-grid" style="grid-template-columns: 1fr; gap: 1rem;">
-                        <div class="stat-card">
-                            <div class="stat-number" style="font-size: 2rem;">250%</div>
-                            <div class="stat-label">年复合增长率</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number" style="font-size: 2rem;">35%</div>
-                            <div class="stat-label">净利润率 (成熟期)</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number" style="font-size: 2rem;">$2,500</div>
-                            <div class="stat-label">平均客单价</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number" style="font-size: 2rem;">3.2</div>
-                            <div class="stat-label">年复购次数</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                <div style="padding: 2rem; background: rgba(15, 23, 42, 0.9); border-radius: 15px; border: 2px solid #10B981; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
-                    <h4 style="color: #10B981; margin-bottom: 1rem;">💰 2025年目标</h4>
-                    <div class="stat-number" style="font-size: 2rem;">$2M</div>
-                    <p>收入目标：产品验证期<br>1000个付费用户</p>
-                </div>
-                <div style="padding: 2rem; background: rgba(15, 23, 42, 0.9); border-radius: 15px; border: 2px solid #F59E0B; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
-                    <h4 style="color: #F59E0B; margin-bottom: 1rem;">🚀 2027年目标</h4>
-                    <div class="stat-number" style="font-size: 2rem;">$25M</div>
-                    <p>收入目标：快速增长期<br>10,000个付费用户</p>
-                </div>
-                <div style="padding: 2rem; background: rgba(15, 23, 42, 0.9); border-radius: 15px; border: 2px solid #8B5CF6; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
-                    <h4 style="color: #8B5CF6; margin-bottom: 1rem;">🌟 2029年目标</h4>
-                    <div class="stat-number" style="font-size: 2rem;">$150M</div>
-                    <p>收入目标：市场主导期<br>60,000个付费用户</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 14: 融资需求 -->
-        <div class="slide">
-            <div class="slide-title">融资需求</div>
-            <div class="slide-number">14</div>
-            <h2>A轮融资计划</h2>
-            <p class="subtitle">$15M A轮融资，加速技术研发与市场扩张</p>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
-                <div>
-                    <h3 style="margin-bottom: 2rem; color: #F59E0B;">💰 资金用途分配</h3>
-                    <div style="space-y: 1.5rem;">
-                        <div style="padding: 1.5rem; background: rgba(139, 92, 246, 0.1); border-radius: 15px; border: 1px solid #8B5CF6; margin-bottom: 1.5rem;">
-                            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 1rem;">
-                                <h4 style="color: #8B5CF6;">🧠 技术研发 (40%)</h4>
-                                <span style="color: #F59E0B; font-weight: bold;">$6M</span>
-                            </div>
-                            <ul style="margin-left: 1rem;">
-                                <li>• Jupiter AI系统升级</li>
-                                <li>• 量子计算技术优化</li>
-                                <li>• 移动端应用开发</li>
-                                <li>• 核心团队扩招</li>
-                            </ul>
-                        </div>
-
-                        <div style="padding: 1.5rem; background: rgba(16, 185, 129, 0.1); border-radius: 15px; border: 1px solid #10B981; margin-bottom: 1.5rem;">
-                            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 1rem;">
-                                <h4 style="color: #10B981;">🌍 市场扩张 (35%)</h4>
-                                <span style="color: #F59E0B; font-weight: bold;">$5.25M</span>
-                            </div>
-                            <ul style="margin-left: 1rem;">
-                                <li>• 5个旗舰体验中心</li>
-                                <li>• 品牌营销推广</li>
-                                <li>• 销售团队建设</li>
-                                <li>• 渠道伙伴拓展</li>
-                            </ul>
-                        </div>
-
-                        <div style="padding: 1.5rem; background: rgba(245, 158, 11, 0.1); border-radius: 15px; border: 1px solid #F59E0B; margin-bottom: 1.5rem;">
-                            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 1rem;">
-                                <h4 style="color: #F59E0B;">🔗 供应链建设 (15%)</h4>
-                                <span style="color: #F59E0B; font-weight: bold;">$2.25M</span>
-                            </div>
-                            <ul style="margin-left: 1rem;">
-                                <li>• 珠材采购与库存</li>
-                                <li>• 供应商网络拓展</li>
-                                <li>• 质量控制体系</li>
-                                <li>• 稀有材料锁定</li>
-                            </ul>
-                        </div>
-
-                        <div style="padding: 1.5rem; background: rgba(236, 72, 153, 0.1); border-radius: 15px; border: 1px solid #EC4899;">
-                            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 1rem;">
-                                <h4 style="color: #EC4899;">💼 运营资本 (10%)</h4>
-                                <span style="color: #F59E0B; font-weight: bold;">$1.5M</span>
-                            </div>
-                            <ul style="margin-left: 1rem;">
-                                <li>• 日常运营费用</li>
-                                <li>• 风险资金储备</li>
-                                <li>• 法务与合规</li>
-                                <li>• 办公场地扩展</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 style="margin-bottom: 2rem; color: #8B5CF6;">🎯 融资里程碑</h3>
-                    <div class="timeline">
-                        <div class="timeline-item" style="width: 100%; left: 0; padding-left: 0;">
-                            <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
-                                <div style="background: #10B981; color: white; padding: 0.5rem 1rem; border-radius: 10px; font-weight: bold; margin-right: 1rem; min-width: 80px; text-align: center;">Q1 2025</div>
+            <div class="content-safe">
+                <h2>三階段發展戰略</h2>
+                <p class="subtitle">從技術領先到市場主導，最終成為行業標準制定者</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025-2026</div>
+                        <div class="timeline-content">
+                            <h3 style="color: #10B981; margin-bottom: 1rem;">📈 近期發展 - 市場建立期</h3>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
                                 <div>
-                                    <h4 style="color: #EC4899;">B轮融资准备</h4>
-                                    <p>启动$50M B轮，国际市场扩张</p>
+                                    <h4 style="color: #8B5CF6;">技術發展</h4>
+                                    <ul style="margin-top: 0.5rem;">
+                                        <li>• Jupiter 2.0版本發布</li>
+                                        <li>• 珠材數據庫擴展至5000種</li>
+                                        <li>• 移動應用程式推出</li>
+                                        <li>• 量子測量精度提升50%</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 style="color: #8B5CF6;">業務發展</h4>
+                                    <ul style="margin-top: 0.5rem;">
+                                        <li>• 5個旗艦體驗中心開設</li>
+                                        <li>• 核心VIP用戶社區建立</li>
+                                        <li>• 高端限量版系列推出</li>
+                                        <li>• 3-5個文化機構合作</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(16, 185, 129, 0.1); border-radius: 8px;">
+                                <strong style="color: #10B981;">目標：完成首輪目標市場品牌建立</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2027-2028</div>
+                        <div class="timeline-content">
+                            <h3 style="color: #F59E0B; margin-bottom: 1rem;">🚀 中期發展 - 規模擴張期</h3>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div>
+                                    <h4 style="color: #8B5CF6;">技術發展</h4>
+                                    <ul style="margin-top: 0.5rem;">
+                                        <li>• 生物識別技術整合</li>
+                                        <li>• AR增強珠材選擇體驗</li>
+                                        <li>• 文化融合計算引擎2.0</li>
+                                        <li>• 材料協同效應完整映射</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 style="color: #8B5CF6;">業務發展</h4>
+                                    <ul style="margin-top: 0.5rem;">
+                                        <li>• 擴展至第二階段目標市場</li>
+                                        <li>• 全球材料採集網路建立</li>
+                                        <li>• 企業定制服務推出</li>
+                                        <li>• 中端產品線開發</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(245, 158, 11, 0.1); border-radius: 8px;">
+                                <strong style="color: #F59E0B;">目標：實現全球主要市場覆蓋</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2029-2030</div>
+                        <div class="timeline-content">
+                            <h3 style="color: #8B5CF6; margin-bottom: 1rem;">🌟 長期發展 - 生態建設期</h3>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div>
+                                    <h4 style="color: #8B5CF6;">技術發展</h4>
+                                    <ul style="margin-top: 0.5rem;">
+                                        <li>• 能量場全息可視化</li>
+                                        <li>• 數位孿生能量模型</li>
+                                        <li>• 量子計算超級個人化</li>
+                                        <li>• 全球能量研究數據庫</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 style="color: #8B5CF6;">業務發展</h4>
+                                    <ul style="margin-top: 0.5rem;">
+                                        <li>• FortuneBeads學院建立</li>
+                                        <li>• 商業應用解決方案</li>
+                                        <li>• 醫療健康領域拓展</li>
+                                        <li>• 跨文化智慧保護平台</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div style="margin-top: 1rem; padding: 0.8rem; background: rgba(139, 92, 246, 0.1); border-radius: 8px;">
+                                <strong style="color: #8B5CF6;">目標：成為能量優化行業標準制定者</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: 財務預測 -->
+        <div class="slide">
+            <div class="slide-title">財務預測</div>
+            <div class="slide-number">13</div>
+            <div class="content-safe">
+                <h2>5年財務模型</h2>
+                <p class="subtitle">保守預測下的爆發式增長潛力</p>
+                
+                <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 2rem; align-items: start;">
+                    <div class="market-chart">
+                        <div style="padding: 1.5rem; height: 100%;">
+                            <h3 style="text-align: center; margin-bottom: 1.5rem; color: #F59E0B;">📊 收入增長預測</h3>
+                            <div style="position: relative; height: 200px; display: flex; align-items: end; justify-content: space-around;">
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <div style="width: 30px; height: 16px; background: linear-gradient(to top, #8B5CF6, #EC4899); margin-bottom: 0.5rem; border-radius: 3px 3px 0 0;"></div>
+                                    <span style="font-size: 0.7rem;">2025</span>
+                                    <span style="font-size: 0.6rem; color: #94a3b8;">$2M</span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <div style="width: 30px; height: 40px; background: linear-gradient(to top, #8B5CF6, #EC4899); margin-bottom: 0.5rem; border-radius: 3px 3px 0 0;"></div>
+                                    <span style="font-size: 0.7rem;">2026</span>
+                                    <span style="font-size: 0.6rem; color: #94a3b8;">$8M</span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <div style="width: 30px; height: 80px; background: linear-gradient(to top, #8B5CF6, #EC4899); margin-bottom: 0.5rem; border-radius: 3px 3px 0 0;"></div>
+                                    <span style="font-size: 0.7rem;">2027</span>
+                                    <span style="font-size: 0.6rem; color: #94a3b8;">$25M</span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <div style="width: 30px; height: 130px; background: linear-gradient(to top, #8B5CF6, #EC4899); margin-bottom: 0.5rem; border-radius: 3px 3px 0 0;"></div>
+                                    <span style="font-size: 0.7rem;">2028</span>
+                                    <span style="font-size: 0.6rem; color: #94a3b8;">$65M</span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <div style="width: 30px; height: 180px; background: linear-gradient(to top, #8B5CF6, #EC4899); margin-bottom: 0.5rem; border-radius: 3px 3px 0 0;"></div>
+                                    <span style="font-size: 0.7rem;">2029</span>
+                                    <span style="font-size: 0.6rem; color: #94a3b8;">$150M</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div style="margin-top: 2rem; padding: 2rem; background: rgba(139, 92, 246, 0.1); border-radius: 15px; border: 1px solid #8B5CF6;">
-                        <h4 style="color: #8B5CF6; margin-bottom: 1rem;">💡 投资亮点</h4>
-                        <ul style="space-y: 0.5rem;">
-                            <li>✅ 全球首创技术，巨大先发优势</li>
-                            <li>✅ 万亿级市场机会，高速增长赛道</li>
-                            <li>✅ 多重护城河，竞争壁垒极高</li>
-                            <li>✅ 明星团队，顶级技术实力</li>
-                            <li>✅ 已验证商业模式，收入快速增长</li>
+                    <div>
+                        <h3 style="margin-bottom: 1.5rem; color: #8B5CF6;">📈 關鍵指標</h3>
+                        <div class="stats-grid" style="grid-template-columns: 1fr; gap: 1rem;">
+                            <div class="stat-card">
+                                <div class="stat-number" style="font-size: 1.8rem;">250%</div>
+                                <div class="stat-label">年複合增長率</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" style="font-size: 1.8rem;">35%</div>
+                                <div class="stat-label">淨利潤率 (成熟期)</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" style="font-size: 1.8rem;">$2,500</div>
+                                <div class="stat-label">平均客單價</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" style="font-size: 1.8rem;">3.2</div>
+                                <div class="stat-label">年複購次數</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+                    <div style="padding: 1.5rem; background: rgba(15, 23, 42, 0.9); border-radius: 15px; border: 2px solid #10B981; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
+                        <h4 style="color: #10B981; margin-bottom: 0.8rem;">💰 2025年目標</h4>
+                        <div class="stat-number" style="font-size: 1.8rem;">$2M</div>
+                        <p>收入目標：產品驗證期<br>1000個付費用戶</p>
+                    </div>
+                    <div style="padding: 1.5rem; background: rgba(15, 23, 42, 0.9); border-radius: 15px; border: 2px solid #F59E0B; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
+                        <h4 style="color: #F59E0B; margin-bottom: 0.8rem;">🚀 2027年目標</h4>
+                        <div class="stat-number" style="font-size: 1.8rem;">$25M</div>
+                        <p>收入目標：快速增長期<br>10,000個付費用戶</p>
+                    </div>
+                    <div style="padding: 1.5rem; background: rgba(15, 23, 42, 0.9); border-radius: 15px; border: 2px solid #8B5CF6; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);">
+                        <h4 style="color: #8B5CF6; margin-bottom: 0.8rem;">🌟 2029年目標</h4>
+                        <div class="stat-number" style="font-size: 1.8rem;">$150M</div>
+                        <p>收入目標：市場主導期<br>60,000個付費用戶</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 14: 融資需求 -->
+        <div class="slide">
+            <div class="slide-title">融資需求</div>
+            <div class="slide-number">14</div>
+            <div class="content-safe">
+                <h2>A輪融資計劃</h2>
+                <p class="subtitle">$15M A輪融資，加速技術研發與市場擴張</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+                    <div>
+                        <h3 style="margin-bottom: 1.5rem; color: #F59E0B;">💰 資金用途分配</h3>
+                        <div class="funding-allocation">
+                            <div class="funding-card" style="background: rgba(139, 92, 246, 0.1); border-color: #8B5CF6;">
+                                <div class="funding-header">
+                                    <h4 class="funding-title" style="color: #8B5CF6;">🧠 技術研發 (40%)</h4>
+                                    <span class="funding-amount">$6M</span>
+                                </div>
+                                <ul>
+                                    <li>• Jupiter AI系統升級</li>
+                                    <li>• 量子計算技術優化</li>
+                                    <li>• 移動端應用開發</li>
+                                    <li>• 核心團隊擴招</li>
+                                </ul>
+                            </div>
+
+                            <div class="funding-card" style="background: rgba(16, 185, 129, 0.1); border-color: #10B981;">
+                                <div class="funding-header">
+                                    <h4 class="funding-title" style="color: #10B981;">🌍 市場擴張 (35%)</h4>
+                                    <span class="funding-amount">$5.25M</span>
+                                </div>
+                                <ul>
+                                    <li>• 5個旗艦體驗中心</li>
+                                    <li>• 品牌營銷推廣</li>
+                                    <li>• 銷售團隊建設</li>
+                                    <li>• 渠道夥伴拓展</li>
+                                </ul>
+                            </div>
+
+                            <div class="funding-card" style="background: rgba(245, 158, 11, 0.1); border-color: #F59E0B;">
+                                <div class="funding-header">
+                                    <h4 class="funding-title" style="color: #F59E0B;">🔗 供應鏈建設 (15%)</h4>
+                                    <span class="funding-amount">$2.25M</span>
+                                </div>
+                                <ul>
+                                    <li>• 珠材採購與庫存</li>
+                                    <li>• 供應商網路拓展</li>
+                                    <li>• 質量控制體系</li>
+                                    <li>• 稀有材料鎖定</li>
+                                </ul>
+                            </div>
+
+                            <div class="funding-card" style="background: rgba(236, 72, 153, 0.1); border-color: #EC4899;">
+                                <div class="funding-header">
+                                    <h4 class="funding-title" style="color: #EC4899;">💼 營運資本 (10%)</h4>
+                                    <span class="funding-amount">$1.5M</span>
+                                </div>
+                                <ul>
+                                    <li>• 日常營運費用</li>
+                                    <li>• 風險資金儲備</li>
+                                    <li>• 法務與合規</li>
+                                    <li>• 辦公場地擴展</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 style="margin-bottom: 1.5rem; color: #8B5CF6;">🎯 融資里程碑</h3>
+                        <div class="timeline">
+                            <div class="timeline-item" style="width: 100%; left: 0; padding-left: 0;">
+                                <div style="display: flex; align-items: center; margin-bottom: 1.2rem;">
+                                    <div style="background: #10B981; color: white; padding: 0.4rem 0.8rem; border-radius: 8px; font-weight: bold; margin-right: 1rem; min-width: 70px; text-align: center; font-size: 0.8rem;">Q1 2025</div>
+                                    <div>
+                                        <h4 style="color: #10B981;">完成A輪融資</h4>
+                                        <p style="font-size: 0.85rem;">$15M資金到位，團隊擴招至50人</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" style="width: 100%; left: 0; padding-left: 0;">
+                                <div style="display: flex; align-items: center; margin-bottom: 1.2rem;">
+                                    <div style="background: #F59E0B; color: white; padding: 0.4rem 0.8rem; border-radius: 8px; font-weight: bold; margin-right: 1rem; min-width: 70px; text-align: center; font-size: 0.8rem;">Q4 2025</div>
+                                    <div>
+                                        <h4 style="color: #F59E0B;">產品商業化</h4>
+                                        <p style="font-size: 0.85rem;">Jupiter 2.0發布，1000付費用戶</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" style="width: 100%; left: 0; padding-left: 0;">
+                                <div style="display: flex; align-items: center; margin-bottom: 1.2rem;">
+                                    <div style="background: #8B5CF6; color: white; padding: 0.4rem 0.8rem; border-radius: 8px; font-weight: bold; margin-right: 1rem; min-width: 70px; text-align: center; font-size: 0.8rem;">Q4 2026</div>
+                                    <div>
+                                        <h4 style="color: #8B5CF6;">規模化驗證</h4>
+                                        <p style="font-size: 0.85rem;">5個體驗中心，$8M年收入</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" style="width: 100%; left: 0; padding-left: 0;">
+                                <div style="display: flex; align-items: center; margin-bottom: 1.2rem;">
+                                    <div style="background: #EC4899; color: white; padding: 0.4rem 0.8rem; border-radius: 8px; font-weight: bold; margin-right: 1rem; min-width: 70px; text-align: center; font-size: 0.8rem;">Q2 2027</div>
+                                    <div>
+                                        <h4 style="color: #EC4899;">B輪融資準備</h4>
+                                        <p style="font-size: 0.85rem;">啟動$50M B輪，國際市場擴張</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(139, 92, 246, 0.1); border-radius: 12px; border: 1px solid #8B5CF6;">
+                            <h4 style="color: #8B5CF6; margin-bottom: 0.8rem;">💡 投資亮點</h4>
+                            <ul>
+                                <li>✅ 全球首創技術，巨大先發優勢</li>
+                                <li>✅ 萬億級市場機會，高速增長賽道</li>
+                                <li>✅ 多重護城河，競爭壁壘極高</li>
+                                <li>✅ 明星團隊，頂級技術實力</li>
+                                <li>✅ 已驗證商業模式，收入快速增長</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 1rem; text-align: center; padding: 1.2rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(245, 158, 11, 0.1)); border-radius: 12px; border: 2px solid #10B981;">
+                            <h4 style="color: #10B981; margin-bottom: 0.8rem;">🎯 退出預期</h4>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div>
+                                    <div class="stat-number" style="font-size: 1.5rem;">5-7年</div>
+                                    <div class="stat-label">退出時間窗口</div>
+                                </div>
+                                <div>
+                                    <div class="stat-number" style="font-size: 1.5rem;">10-20倍</div>
+                                    <div class="stat-label">預期投資回報</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 15: 核心團隊 -->
+        <div class="slide">
+            <div class="slide-title">核心團隊</div>
+            <div class="slide-number">15</div>
+            <div class="content-safe">
+                <h2>世界級AI + 文化傳承團隊</h2>
+                <p class="subtitle">頂級技術專家 + 傳統文化大師 + 商業精英的完美組合</p>
+                
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-icon">AI</div>
+                        <h3 class="team-name">首席技術官</h3>
+                        <p class="team-role">AI算法專家</p>
+                        <p>前Google Brain資深科學家，深度學習領域頂級專家，發表Nature論文15篇，量子計算算法發明者</p>
+                        <div class="team-education">
+                            <i class="fas fa-graduation-cap"></i> 史丹佛博士 | MIT博士後
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-icon">文</div>
+                        <h3 class="team-name">首席文化官</h3>
+                        <p class="team-role">傳統文化大師</p>
+                        <p>中國易學協會會長，精通12種文化運勢體系，40年傳統文化研究，與全球頂級命理大師深度合作</p>
+                        <div class="team-education">
+                            <i class="fas fa-yin-yang"></i> 清華國學博士 | 哈佛訪問學者
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-icon">商</div>
+                        <h3 class="team-name">首席執行官</h3>
+                        <p class="team-role">連續創業者</p>
+                        <p>前阿里巴巴副總裁，主導3次成功IPO，在珠寶行業有15年經驗，深度理解高端消費市場</p>
+                        <div class="team-education">
+                            <i class="fas fa-chart-line"></i> 華頓MBA | 連續創業者
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-icon">科</div>
+                        <h3 class="team-name">首席科學官</h3>
+                        <p class="team-role">量子物理專家</p>
+                        <p>前IBM量子計算實驗室主任，量子測量技術發明者，在Nature、Science發表論文50+篇</p>
+                        <div class="team-education">
+                            <i class="fas fa-atom"></i> 加州理工博士 | IEEE Fellow
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-icon">產</div>
+                        <h3 class="team-name">首席產品官</h3>
+                        <p class="team-role">用戶體驗專家</p>
+                        <p>前Apple設計總監，主導iPhone用戶體驗設計，在高端消費品用戶體驗方面有獨特見解</p>
+                        <div class="team-education">
+                            <i class="fas fa-palette"></i> RISD碩士 | 蘋果8年經驗
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-icon">材</div>
+                        <h3 class="team-name">首席採購官</h3>
+                        <p class="team-role">珠材專家</p>
+                        <p>20年珠寶行業經驗，與全球27個國家的頂級供應商建立合作關係，稀有材料採購專家</p>
+                        <div class="team-education">
+                            <i class="fas fa-gem"></i> GIA認證 | 全球珠寶網路
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; padding: 1.5rem; background: rgba(139, 92, 246, 0.1); border-radius: 16px; border: 1px solid #8B5CF6;">
+                    <h3 style="text-align: center; color: #F59E0B; margin-bottom: 1.5rem;">🎖️ 顧問團隊</h3>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+                        <div style="text-align: center;">
+                            <h4 style="color: #8B5CF6;">技術顧問</h4>
+                            <p>Geoffrey Hinton<br><small>深度學習之父</small></p>
+                        </div>
+                        <div style="text-align: center;">
+                            <h4 style="color: #8B5CF6;">文化顧問</h4>
+                            <p>傅佩榮教授<br><small>國學大師</small></p>
+                        </div>
+                        <div style="text-align: center;">
+                            <h4 style="color: #8B5CF6;">商業顧問</h4>
+                            <p>Marc Benioff<br><small>Salesforce創始人</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 16: 風險管控 -->
+        <div class="slide">
+            <div class="slide-title">風險管控</div>
+            <div class="slide-number">16</div>
+            <div class="content-safe">
+                <h2>全面風險評估與應對策略</h2>
+                <p class="subtitle">識別潛在風險，制定完善應對方案，確保項目穩健發展</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card" style="border-color: #EF4444;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #EF4444, #DC2626);">⚠️</div>
+                        <h3>技術風險</h3>
+                        <p><strong>風險點：</strong>AI算法優化難度、量子計算技術不成熟</p>
+                        <hr style="margin: 0.8rem 0; border-color: rgba(239, 68, 68, 0.3);">
+                        <p><strong>應對策略：</strong></p>
+                        <ul>
+                            <li>• 分階段技術實現，確保每個版本可用</li>
+                            <li>• 與IBM、Google量子實驗室合作</li>
+                            <li>• 建立技術儲備，多路徑並行研發</li>
                         </ul>
                     </div>
 
-                    <div style="margin-top: 1.5rem; text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(245, 158, 11, 0.1)); border-radius: 15px; border: 2px solid #10B981;">
-                        <h4 style="color: #10B981; margin-bottom: 1rem;">🎯 退出预期</h4>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                            <div>
-                                <div class="stat-number" style="font-size: 1.8rem;">5-7年</div>
-                                <div class="stat-label">退出时间窗口</div>
-                            </div>
-                            <div>
-                                <div class="stat-number" style="font-size: 1.8rem;">10-20倍</div>
-                                <div class="stat-label">预期投资回报</div>
-                            </div>
+                    <div class="feature-card" style="border-color: #F59E0B;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #F59E0B, #D97706);">📈</div>
+                        <h3>市場風險</h3>
+                        <p><strong>風險點：</strong>市場接受度不確定、競爭對手快速跟進</p>
+                        <hr style="margin: 0.8rem 0; border-color: rgba(245, 158, 11, 0.3);">
+                        <p><strong>應對策略：</strong></p>
+                        <ul>
+                            <li>• 深度市場調研，精準用戶定位</li>
+                            <li>• 建立強大技術護城河和專利壁壘</li>
+                            <li>• 與傳統文化機構深度綁定</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card" style="border-color: #8B5CF6;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED);">🏛️</div>
+                        <h3>文化風險</h3>
+                        <p><strong>風險點：</strong>文化敏感性、傳統與現代融合難度</p>
+                        <hr style="margin: 0.8rem 0; border-color: rgba(139, 92, 246, 0.3);">
+                        <p><strong>應對策略：</strong></p>
+                        <ul>
+                            <li>• 聘請各文化領域權威專家顧問</li>
+                            <li>• 建立文化審核委員會</li>
+                            <li>• 與文化保護機構合作</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card" style="border-color: #10B981;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #10B981, #059669);">⚖️</div>
+                        <h3>監管風險</h3>
+                        <p><strong>風險點：</strong>跨國經營合規、AI技術監管政策變化</p>
+                        <hr style="margin: 0.8rem 0; border-color: rgba(16, 185, 129, 0.3);">
+                        <p><strong>應對策略：</strong></p>
+                        <ul>
+                            <li>• 建立全球合規團隊</li>
+                            <li>• 積極參與行業標準制定</li>
+                            <li>• 與監管機構保持良好溝通</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card" style="border-color: #EC4899;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #EC4899, #DB2777);">🔗</div>
+                        <h3>供應鏈風險</h3>
+                        <p><strong>風險點：</strong>稀有材料供應不穩定、價格波動大</p>
+                        <hr style="margin: 0.8rem 0; border-color: rgba(236, 72, 153, 0.3);">
+                        <p><strong>應對策略：</strong></p>
+                        <ul>
+                            <li>• 與多家供應商簽署長期協議</li>
+                            <li>• 建立材料庫存緩衝機制</li>
+                            <li>• 開發替代材料方案</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card" style="border-color: #3B82F6;">
+                        <div class="feature-icon" style="background: linear-gradient(135deg, #3B82F6, #2563EB);">💰</div>
+                        <h3>財務風險</h3>
+                        <p><strong>風險點：</strong>現金流管理、融資節奏控制</p>
+                        <hr style="margin: 0.8rem 0; border-color: rgba(59, 130, 246, 0.3);">
+                        <p><strong>應對策略：</strong></p>
+                        <ul>
+                            <li>• 建立18個月現金流緩衝</li>
+                            <li>• 分階段融資降低稀釋風險</li>
+                            <li>• 建立多元化收入模式</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem; text-align: center; padding: 1.5rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(139, 92, 246, 0.1)); border-radius: 16px; border: 2px solid #10B981;">
+                    <h3 style="color: #10B981; margin-bottom: 1rem;">🛡️ 風險管控優勢</h3>
+                    <p style="margin-bottom: 1.2rem;">我們具備完善的風險識別、評估和應對體系，確保項目穩健發展</p>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+                        <div>
+                            <div class="stat-number" style="font-size: 1.8rem;">95%</div>
+                            <div class="stat-label">風險覆蓋率</div>
+                        </div>
+                        <div>
+                            <div class="stat-number" style="font-size: 1.8rem;">24/7</div>
+                            <div class="stat-label">風險監控</div>
+                        </div>
+                        <div>
+                            <div class="stat-number" style="font-size: 1.8rem;">48h</div>
+                            <div class="stat-label">應急回應時間</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 15: 团队介绍 -->
+        <!-- Slide 17: 結語與聯繫 -->
         <div class="slide">
-            <div class="slide-title">核心团队</div>
-            <div class="slide-number">15</div>
-            <h2>世界级AI + 文化传承团队</h2>
-            <p class="subtitle">顶级技术专家 + 传统文化大师 + 商业精英的完美组合</p>
-            
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #8B5CF6, #EC4899); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; font-weight: bold;">AI</div>
-                    <h3>首席技术官</h3>
-                    <p><strong>AI算法专家</strong></p>
-                    <p>前Google Brain资深科学家，深度学习领域顶级专家，发表Nature论文15篇，量子计算算法发明者</p>
-                    <div style="margin-top: 1rem; color: #8B5CF6;">
-                        <i class="fas fa-graduation-cap"></i> 斯坦福博士 | MIT博士后
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #F59E0B, #EC4899); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; font-weight: bold;">文</div>
-                    <h3>首席文化官</h3>
-                    <p><strong>传统文化大师</strong></p>
-                    <p>中国易学协会会长，精通12种文化运势体系，40年传统文化研究，与全球顶级命理大师深度合作</p>
-                    <div style="margin-top: 1rem; color: #F59E0B;">
-                        <i class="fas fa-yin-yang"></i> 清华国学博士 | 哈佛访问学者
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #10B981, #3B82F6); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; font-weight: bold;">商</div>
-                    <h3>首席执行官</h3>
-                    <p><strong>连续创业者</strong></p>
-                    <p>前阿里巴巴副总裁，主导3次成功IPO，在珠宝行业有15年经验，深度理解高端消费市场</p>
-                    <div style="margin-top: 1rem; color: #10B981;">
-                        <i class="fas fa-chart-line"></i> 沃顿MBA | 连续创业者
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #3B82F6, #8B5CF6); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; font-weight: bold;">科</div>
-                    <h3>首席科学官</h3>
-                    <p><strong>量子物理专家</strong></p>
-                    <p>前IBM量子计算实验室主任，量子测量技术发明者，在Nature、Science发表论文50+篇</p>
-                    <div style="margin-top: 1rem; color: #3B82F6;">
-                        <i class="fas fa-atom"></i> 加州理工博士 | IEEE Fellow
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #EC4899, #F59E0B); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; font-weight: bold;">产</div>
-                    <h3>首席产品官</h3>
-                    <p><strong>用户体验专家</strong></p>
-                    <p>前Apple设计总监，主导iPhone用户体验设计，在高端消费品用户体验方面有独特见解</p>
-                    <div style="margin-top: 1rem; color: #EC4899;">
-                        <i class="fas fa-palette"></i> RISD硕士 | 苹果8年经验
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #84CC16, #10B981); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; font-weight: bold;">材</div>
-                    <h3>首席采购官</h3>
-                    <p><strong>珠材专家</strong></p>
-                    <p>20年珠宝行业经验，与全球27个国家的顶级供应商建立合作关系，稀有材料采购专家</p>
-                    <div style="margin-top: 1rem; color: #84CC16;">
-                        <i class="fas fa-gem"></i> GIA认证 | 全球珠宝网络
-                    </div>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; padding: 2rem; background: rgba(139, 92, 246, 0.1); border-radius: 20px; border: 1px solid #8B5CF6;">
-                <h3 style="text-align: center; color: #F59E0B; margin-bottom: 2rem;">🎖️ 顾问团队</h3>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                    <div style="text-align: center;">
-                        <h4 style="color: #8B5CF6;">技术顾问</h4>
-                        <p>Geoffrey Hinton<br><small>深度学习之父</small></p>
-                    </div>
-                    <div style="text-align: center;">
-                        <h4 style="color: #8B5CF6;">文化顾问</h4>
-                        <p>傅佩荣教授<br><small>国学大师</small></p>
-                    </div>
-                    <div style="text-align: center;">
-                        <h4 style="color: #8B5CF6;">商业顾问</h4>
-                        <p>Marc Benioff<br><small>Salesforce创始人</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 16: 风险与对策 -->
-        <div class="slide">
-            <div class="slide-title">风险管控</div>
-            <div class="slide-number">16</div>
-            <h2>全面风险评估与应对策略</h2>
-            <p class="subtitle">识别潜在风险，制定完善应对方案，确保项目稳健发展</p>
-            
-            <div class="feature-grid">
-                <div class="feature-card" style="border-color: #EF4444;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #EF4444, #DC2626);">⚠️</div>
-                    <h3>技术风险</h3>
-                    <p><strong>风险点：</strong>AI算法优化难度、量子计算技术不成熟</p>
-                    <hr style="margin: 1rem 0; border-color: rgba(239, 68, 68, 0.3);">
-                    <p><strong>应对策略：</strong></p>
-                    <ul style="text-align: left; margin-top: 0.5rem;">
-                        <li>• 分阶段技术实现，确保每个版本可用</li>
-                        <li>• 与IBM、Google量子实验室合作</li>
-                        <li>• 建立技术储备，多路径并行研发</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card" style="border-color: #F59E0B;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #F59E0B, #D97706);">📈</div>
-                    <h3>市场风险</h3>
-                    <p><strong>风险点：</strong>市场接受度不确定、竞争对手快速跟进</p>
-                    <hr style="margin: 1rem 0; border-color: rgba(245, 158, 11, 0.3);">
-                    <p><strong>应对策略：</strong></p>
-                    <ul style="text-align: left; margin-top: 0.5rem;">
-                        <li>• 深度市场调研，精准用户定位</li>
-                        <li>• 建立强大技术护城河和专利壁垒</li>
-                        <li>• 与传统文化机构深度绑定</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card" style="border-color: #8B5CF6;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED);">🏛️</div>
-                    <h3>文化风险</h3>
-                    <p><strong>风险点：</strong>文化敏感性、传统与现代融合难度</p>
-                    <hr style="margin: 1rem 0; border-color: rgba(139, 92, 246, 0.3);">
-                    <p><strong>应对策略：</strong></p>
-                    <ul style="text-align: left; margin-top: 0.5rem;">
-                        <li>• 聘请各文化领域权威专家顾问</li>
-                        <li>• 建立文化审核委员会</li>
-                        <li>• 与文化保护机构合作</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card" style="border-color: #10B981;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #10B981, #059669);">⚖️</div>
-                    <h3>监管风险</h3>
-                    <p><strong>风险点：</strong>跨国经营合规、AI技术监管政策变化</p>
-                    <hr style="margin: 1rem 0; border-color: rgba(16, 185, 129, 0.3);">
-                    <p><strong>应对策略：</strong></p>
-                    <ul style="text-align: left; margin-top: 0.5rem;">
-                        <li>• 建立全球合规团队</li>
-                        <li>• 积极参与行业标准制定</li>
-                        <li>• 与监管机构保持良好沟通</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card" style="border-color: #EC4899;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #EC4899, #DB2777);">🔗</div>
-                    <h3>供应链风险</h3>
-                    <p><strong>风险点：</strong>稀有材料供应不稳定、价格波动大</p>
-                    <hr style="margin: 1rem 0; border-color: rgba(236, 72, 153, 0.3);">
-                    <p><strong>应对策略：</strong></p>
-                    <ul style="text-align: left; margin-top: 0.5rem;">
-                        <li>• 与多家供应商签署长期协议</li>
-                        <li>• 建立材料库存缓冲机制</li>
-                        <li>• 开发替代材料方案</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card" style="border-color: #3B82F6;">
-                    <div class="feature-icon" style="background: linear-gradient(135deg, #3B82F6, #2563EB);">💰</div>
-                    <h3>财务风险</h3>
-                    <p><strong>风险点：</strong>现金流管理、融资节奏控制</p>
-                    <hr style="margin: 1rem 0; border-color: rgba(59, 130, 246, 0.3);">
-                    <p><strong>应对策略：</strong></p>
-                    <ul style="text-align: left; margin-top: 0.5rem;">
-                        <li>• 建立18个月现金流缓冲</li>
-                        <li>• 分阶段融资降低稀释风险</li>
-                        <li>• 建立多元化收入模式</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div style="margin-top: 2rem; text-align: center; padding: 2rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(139, 92, 246, 0.1)); border-radius: 20px; border: 2px solid #10B981;">
-                <h3 style="color: #10B981; margin-bottom: 1rem;">🛡️ 风险管控优势</h3>
-                <p style="margin-bottom: 1.5rem;">我们具备完善的风险识别、评估和应对体系，确保项目稳健发展</p>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                    <div>
-                        <div class="stat-number" style="font-size: 2rem;">95%</div>
-                        <div class="stat-label">风险覆盖率</div>
-                    </div>
-                    <div>
-                        <div class="stat-number" style="font-size: 2rem;">24/7</div>
-                        <div class="stat-label">风险监控</div>
-                    </div>
-                    <div>
-                        <div class="stat-number" style="font-size: 2rem;">48h</div>
-                        <div class="stat-label">应急响应时间</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 17: 结语与联系 -->
-        <div class="slide">
-            <div class="slide-title">携手共创</div>
+            <div class="slide-title">攜手共創</div>
             <div class="slide-number">17</div>
-            <div class="logo" style="margin-bottom: 2rem;">FortuneBeads</div>
-            <h1>重新定义人类命运优化科学</h1>
-            <p class="subtitle">
-                5000年智慧 × 量子级精度 × AI超能力<br>
-                = 个人命运优化的终极解决方案
-            </p>
-            
-            <div style="margin: 3rem 0;">
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 800px; margin: 0 auto;">
-                    <div class="stat-card">
-                        <div class="stat-number" style="font-size: 2rem;">万亿级</div>
-                        <div class="stat-label">市场机会</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" style="font-size: 2rem;">全球首创</div>
-                        <div class="stat-label">技术突破</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" style="font-size: 2rem;">世界级</div>
-                        <div class="stat-label">团队配置</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" style="font-size: 2rem;">10-20倍</div>
-                        <div class="stat-label">投资回报</div>
-                    </div>
-                </div>
-            </div>
-
-            <div style="margin: 3rem 0; padding: 3rem; background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(245, 158, 11, 0.1)); border-radius: 25px; border: 2px solid #8B5CF6;">
-                <h2 style="margin-bottom: 2rem; color: #F59E0B;">🤝 诚邀合作</h2>
+            <div class="content-safe">
+                <div class="logo" style="margin-bottom: 1.5rem;">FortuneBeads</div>
+                <h1>重新定義人類命運優化科學</h1>
+                <p class="subtitle">
+                    5000年智慧 × 量子級精度 × AI超能力<br>
+                    = 個人命運優化的終極解決方案
+                </p>
                 
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; margin-bottom: 2rem;">
-                    <div>
-                        <h3 style="color: #8B5CF6; margin-bottom: 1rem;">💰 A轮融资</h3>
-                        <p style="font-size: 1.2rem; margin-bottom: 1rem;"><strong>融资规模：$15M</strong></p>
-                        <p>用于技术研发、市场扩张、团队建设</p>
-                    </div>
-                    <div>
-                        <h3 style="color: #8B5CF6; margin-bottom: 1rem;">🎯 寻找伙伴</h3>
-                        <p style="font-size: 1.2rem; margin-bottom: 1rem;"><strong>战略投资者 + 财务投资者</strong></p>
-                        <p>具备行业资源、全球视野的投资伙伴</p>
-                    </div>
-                </div>
-
-                <div style="text-align: center; padding: 2rem; background: rgba(26, 32, 44, 0.6); border-radius: 15px;">
-                    <h3 style="color: #F59E0B; margin-bottom: 1.5rem;">📞 联系我们</h3>
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
-                        <div>
-                            <p><strong>邮箱：</strong> investors@beads.chat</p>
+                <div style="margin: 2rem 0;">
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 700px; margin: 0 auto;">
+                        <div class="stat-card">
+                            <div class="stat-number" style="font-size: 1.8rem;">萬億級</div>
+                            <div class="stat-label">市場機會</div>
                         </div>
-                        <div>
-                            <p><strong>地址：</strong> 香港九龙塘狮子山道888号</p>
-                            <p><strong>网站：</strong> www.beads.chat</p>
+                        <div class="stat-card">
+                            <div class="stat-number" style="font-size: 1.8rem;">全球首創</div>
+                            <div class="stat-label">技術突破</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" style="font-size: 1.8rem;">世界級</div>
+                            <div class="stat-label">團隊配置</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" style="font-size: 1.8rem;">10-20倍</div>
+                            <div class="stat-label">投資回報</div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div style="text-align: center; font-size: 1.2rem; color: #94a3b8; margin-top: 2rem;">
-                <p><em>"让每个人都能掌握自身命运"</em></p>
-                <p style="margin-top: 1rem; font-size: 1rem;">FortuneBeads - 命运优化的科学革命</p>
+                <div style="margin: 2rem 0; padding: 2rem; background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(245, 158, 11, 0.1)); border-radius: 20px; border: 2px solid #8B5CF6;">
+                    <h2 style="margin-bottom: 1.5rem; color: #F59E0B;">🤝 誠邀合作</h2>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <h3 style="color: #8B5CF6; margin-bottom: 0.8rem;">💰 A輪融資</h3>
+                            <p style="font-size: 1.1rem; margin-bottom: 0.8rem;"><strong>融資規模：$15M</strong></p>
+                            <p>用於技術研發、市場擴張、團隊建設</p>
+                        </div>
+                        <div>
+                            <h3 style="color: #8B5CF6; margin-bottom: 0.8rem;">🎯 尋找夥伴</h3>
+                            <p style="font-size: 1.1rem; margin-bottom: 0.8rem;"><strong>戰略投資者 + 財務投資者</strong></p>
+                            <p>具備行業資源、全球視野的投資夥伴</p>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(15, 23, 42, 0.6); border-radius: 12px;">
+                        <h3 style="color: #F59E0B; margin-bottom: 1.2rem;">📞 聯繫我們</h3>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+                            <div>
+                                <p><strong>郵箱：</strong> investors@beads.chat</p>
+                            </div>
+                            <div>
+                                <p><strong>地址：</strong> 香港九龍塘獅子山道888號</p>
+                                <p><strong>網站：</strong> www.beads.chat</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; font-size: 1.1rem; color: #94a3b8; margin-top: 1.5rem;">
+                    <p><em>"讓每個人都能掌握自身命運"</em></p>
+                    <p style="margin-top: 0.8rem; font-size: 0.9rem;">FortuneBeads - 命運優化的科學革命</p>
+                </div>
             </div>
         </div>
     </div>
@@ -1913,7 +2133,7 @@
         // Create particles
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 30; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 particle.style.left = Math.random() * 100 + '%';
@@ -1943,6 +2163,9 @@
             setTimeout(() => {
                 currentSlideElement.classList.remove('fade-in');
             }, 1000);
+            
+            // Update slide title for screen readers
+            document.title = `FortuneBeads 投資人介紹PPT - 第${currentSlide + 1}頁`;
         }
 
         function nextSlide() {
@@ -1970,28 +2193,47 @@
                 if (slideNumber < totalSlides) {
                     goToSlide(slideNumber);
                 }
+            } else if (event.key === 'Home') {
+                event.preventDefault();
+                goToSlide(0);
+            } else if (event.key === 'End') {
+                event.preventDefault();
+                goToSlide(totalSlides - 1);
+            } else if (event.key === 'Escape') {
+                // Toggle fullscreen
+                if (document.fullscreenElement) {
+                    document.exitFullscreen();
+                } else {
+                    document.documentElement.requestFullscreen();
+                }
             }
         });
 
         // Touch/swipe support for mobile
         let startX = 0;
         let endX = 0;
+        let startY = 0;
+        let endY = 0;
 
         document.addEventListener('touchstart', function(event) {
             startX = event.touches[0].clientX;
+            startY = event.touches[0].clientY;
         });
 
         document.addEventListener('touchend', function(event) {
             endX = event.changedTouches[0].clientX;
+            endY = event.changedTouches[0].clientY;
             handleSwipe();
         });
 
         function handleSwipe() {
             const threshold = 50;
-            const diff = startX - endX;
+            const diffX = startX - endX;
+            const diffY = Math.abs(startY - endY);
             
-            if (Math.abs(diff) > threshold) {
-                if (diff > 0) {
+            // Only handle horizontal swipes (ignore vertical scrolling)
+            if (Math.abs(diffX) > threshold && diffY < 100) {
+                if (diffX > 0) {
                     nextSlide();
                 } else {
                     previousSlide();
@@ -1999,83 +2241,174 @@
             }
         }
 
-        // Auto-play functionality (optional)
-        let autoPlayInterval;
-        function startAutoPlay() {
-            autoPlayInterval = setInterval(() => {
-                if (currentSlide < totalSlides - 1) {
+        // Mouse wheel navigation
+        document.addEventListener('wheel', function(event) {
+            if (Math.abs(event.deltaY) > 50) {
+                event.preventDefault();
+                if (event.deltaY > 0) {
                     nextSlide();
                 } else {
-                    goToSlide(0);
+                    previousSlide();
                 }
-            }, 10000); // 10 seconds per slide
+            }
+        }, { passive: false });
+
+        // Presentation timer
+        let presentationStartTime = Date.now();
+        let slideStartTime = Date.now();
+        let slideTimes = [];
+
+        function updateSlideTimer() {
+            slideStartTime = Date.now();
         }
 
-        function stopAutoPlay() {
-            clearInterval(autoPlayInterval);
+        function getSlideTime() {
+            return Date.now() - slideStartTime;
         }
 
-        // Start auto-play when page loads, stop when user interacts
+        function getPresentationTime() {
+            return Date.now() - presentationStartTime;
+        }
+
+        // Slide progress tracking
+        function trackSlideProgress() {
+            slideTimes[currentSlide] = getSlideTime();
+            updateSlideTimer();
+        }
+
+        // Add progress tracking to slide changes
+        const originalGoToSlide = goToSlide;
+        goToSlide = function(slideIndex) {
+            if (slideIndex !== currentSlide) {
+                trackSlideProgress();
+            }
+            originalGoToSlide(slideIndex);
+        };
+
+        // Auto-resize text for better fit
+        function autoResizeText() {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => {
+                const contentSafe = slide.querySelector('.content-safe');
+                if (contentSafe) {
+                    const slideHeight = slide.clientHeight;
+                    const contentHeight = contentSafe.scrollHeight;
+                    
+                    if (contentHeight > slideHeight * 0.9) {
+                        // Content is too tall, reduce font sizes slightly
+                        const h2 = slide.querySelector('h2');
+                        const subtitle = slide.querySelector('.subtitle');
+                        const cards = slide.querySelectorAll('.feature-card, .stat-card, .culture-card');
+                        
+                        if (h2) h2.style.fontSize = '2.2rem';
+                        if (subtitle) subtitle.style.fontSize = '1.1rem';
+                        cards.forEach(card => {
+                            card.style.fontSize = '0.85rem';
+                        });
+                    }
+                }
+            });
+        }
+
+        // Presentation mode toggle
+        function togglePresentationMode() {
+            const nav = document.querySelector('.nav-container');
+            const controls = document.querySelector('.nav-controls');
+            const slideNumbers = document.querySelectorAll('.slide-number');
+            const slideTitles = document.querySelectorAll('.slide-title');
+            
+            if (nav.style.display === 'none') {
+                nav.style.display = 'flex';
+                controls.style.display = 'flex';
+                slideNumbers.forEach(el => el.style.display = 'block');
+                slideTitles.forEach(el => el.style.display = 'block');
+            } else {
+                nav.style.display = 'none';
+                controls.style.display = 'none';
+                slideNumbers.forEach(el => el.style.display = 'none');
+                slideTitles.forEach(el => el.style.display = 'none');
+            }
+        }
+
+        // Add keyboard shortcut for presentation mode
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'p' || event.key === 'P') {
+                event.preventDefault();
+                togglePresentationMode();
+            }
+        });
+
+        // Initialize presentation
         document.addEventListener('DOMContentLoaded', function() {
             createParticles();
             updateNavigation();
+            autoResizeText();
             
-            // Uncomment to enable auto-play
-            // startAutoPlay();
+            // Add resize listener for responsive adjustments
+            window.addEventListener('resize', autoResizeText);
             
-            // Stop auto-play on user interaction
-            document.addEventListener('click', stopAutoPlay);
-            document.addEventListener('keydown', stopAutoPlay);
-            document.addEventListener('touchstart', stopAutoPlay);
-        });
-
-        // Add smooth transitions and animations
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate feature cards on slide change
+            // Preload next slide images for smoother transitions
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = 'image';
+                link.href = img.src;
+                document.head.appendChild(link);
+            });
+            
+            // Add animation observer for cards
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.style.animationDelay = Math.random() * 0.5 + 's';
+                        entry.target.style.animationDelay = Math.random() * 0.3 + 's';
                         entry.target.classList.add('slide-up');
                     }
                 });
             }, { threshold: 0.1 });
 
-            document.querySelectorAll('.feature-card, .stat-card, .pricing-card').forEach(card => {
+            document.querySelectorAll('.feature-card, .stat-card, .pricing-card, .culture-card').forEach(card => {
                 observer.observe(card);
+            });
+            
+            // Initialize slide timer
+            updateSlideTimer();
+            
+            console.log('🎯 FortuneBeads 投資人介紹PPT 已就緒');
+            console.log('⌨️  鍵盤快捷鍵：');
+            console.log('   ← → 或 空格鍵：切換幻燈片');
+            console.log('   Home/End：跳到首頁/末頁');
+            console.log('   Esc：切換全屏模式');
+            console.log('   P：切換演示模式');
+            console.log('   1-9：快速跳轉到指定頁面');
+        });
+        
+        // Add touch feedback
+        document.addEventListener('touchstart', function() {
+            document.body.style.cursor = 'pointer';
+        });
+        
+        document.addEventListener('touchend', function() {
+            document.body.style.cursor = 'default';
+        });
+        
+        // Prevent context menu on long press for better mobile experience
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+        
+        // Add visual feedback for navigation
+        document.querySelectorAll('.nav-dot').forEach(dot => {
+            dot.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.3)';
+            });
+            
+            dot.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('active')) {
+                    this.style.transform = 'scale(1)';
+                }
             });
         });
     </script>
 </body>
-</html>style="color: #10B981;">完成A轮融资</h4>
-                                    <p>$15M资金到位，团队扩招至50人</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item" style="width: 100%; left: 0; padding-left: 0;">
-                            <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
-                                <div style="background: #F59E0B; color: white; padding: 0.5rem 1rem; border-radius: 10px; font-weight: bold; margin-right: 1rem; min-width: 80px; text-align: center;">Q4 2025</div>
-                                <div>
-                                    <h4 style="color: #F59E0B;">产品商业化</h4>
-                                    <p>Jupiter 2.0发布，1000付费用户</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item" style="width: 100%; left: 0; padding-left: 0;">
-                            <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
-                                <div style="background: #8B5CF6; color: white; padding: 0.5rem 1rem; border-radius: 10px; font-weight: bold; margin-right: 1rem; min-width: 80px; text-align: center;">Q4 2026</div>
-                                <div>
-                                    <h4 style="color: #8B5CF6;">规模化验证</h4>
-                                    <p>5个体验中心，$8M年收入</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item" style="width: 100%; left: 0; padding-left: 0;">
-                            <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
-                                <div style="background: #EC4899; color: white; padding: 0.5rem 1rem; border-radius: 10px; font-weight: bold; margin-right: 1rem; min-width: 80px; text-align: center;">Q2 2027</div>
-                                <div>
-                                    <h4 
-                
+</html>
